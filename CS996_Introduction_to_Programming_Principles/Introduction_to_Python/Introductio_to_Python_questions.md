@@ -25,9 +25,15 @@ The computer can operate on the variable and update its value
 
 ## Defining an integer
 
+1. Provide code to define an integer variable with value 4
+
 ## Defining a float
 
+1. Provide code to define a float variable with value 3.14159
+
 ## Defining a string
+
+1. Provide code to define a string variable with value "This is some text"
 
 ## Defining a list
 
