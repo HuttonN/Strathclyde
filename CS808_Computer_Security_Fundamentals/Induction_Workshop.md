@@ -2,7 +2,7 @@
 
 Look into some useful background for the CS808 course
 
-# Binary, bits and bytes
+## Binary, bits and bytes
 
 Binary is a base 2 numbering system, e.g. 1 or 0, on or off, etc. It is the way data is represented in computing. 
 
