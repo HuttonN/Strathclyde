@@ -141,70 +141,55 @@ There are two stages when we look at biometric authentication - enrolment then o
 
 * ***enrolment:*** When we look at enrolment, what we're trying to establish is what's referred to as a template. A template is basically the computer representation of that distinctive trait. So for example, a fingerprint could be broken down into aspects, such as the swirls and loops within your fingerprint. Having this template stored means that when you go to authenticate, you provide your biometric, and it can take that, perform the similar calculation, and determine whether it's sufficiently close to the template. This then takes us to different modes of operation.
 * ***operations:*** Within biometrics, we can either use it in identification mode or verification mode.
-    * Verification: this mode is very likely what you use most of the time. This is where there's a template stored, you've already claimed your identity, and you're just trying to check that the biometric you provide matches the identity template that they have on the database.
-    * Identification: In contrast, identification mode is more like what we would think of as a watch list for the FBI, where you're presented with a biometric and you need try and find the corresponding identity from the database. That's a much more challenging problem and not one that we are particularly interested in for this module. So, we'll focus on verification mode.
+    * ***Verification:*** this mode is very likely what you use most of the time. This is where there's a template stored, you've already claimed your identity, and you're just trying to check that the biometric you provide matches the identity template that they have on the database.
+    * ***Identification:*** In contrast, identification mode is more like what we would think of as a watch list for the FBI, where you're presented with a biometric and you need try and find the corresponding identity from the database. That's a much more challenging problem and not one that we are particularly interested in for this module. So, we'll focus on verification mode.
 
 When looking at different biometric systems, one helpful tool is to be able to determine whether one is better than the other. In order to do this, we need to define a few metrics, which are going to be helpful. We have 
-* ***true positive:*** where someone is the genuine user and is accepted as they should be. 
-* ***true negative:*** where someone isn't a user and they are correctly rejected. 
-* ***false positive:*** where someone shouldn't be allowed access, but is allowed access. 
-* ***false negative:*** where someone should be accepted, but they have been rejected
+* ***true positive (TP):*** where someone is the genuine user and is accepted as they should be. 
+* ***true negative (TN):*** where someone isn't a user and they are correctly rejected. 
+* ***false positive (FP):*** where someone shouldn't be allowed access, but is allowed access. 
+* ***false negative (FN):*** where someone should be accepted, but they have been rejected
 
-***TO TIDY UP AFTER THIS:***
+The following are also needed:
+* ***true acceptance rate:*** proportion of genuine users that are appropriately authenticated. Given by $\frac{TP}{TP+FN}$ 
+* ***true rejection rate:*** proportion of unauthorised users that are appropriately rejected. Given by $\frac{TN}{TN+FP}$ 
+* ***false acceptance rate:*** proportion of unauthorised users that a incorrectly authenticated. Given by $\frac{FP}{FP+TN}$
+* ***false rejection rate:*** proportion of genuine users that are incorrectly rejected. Given by $\frac{FN}{FN+TP}$
 
-Clearly, in any biometric system, we want to maximise the true positives and minimise the false negatives. One way of modelling this information is to use an ROC curve. This stands for Receiver Operating Characteristic. Effectively, what this does is it maps our true accept rate, so that's the proportion of people who were accepted and should have been accepted versus the false
-accept rate. So that's the proportion of people who were accepted, but shouldn't have been.
-We can calculate these values by the following. Our true accept rate is going to be our true
-positives versus true positives plus false negatives. So true positives aand false negatives is
-the total number of actual positives that we should have. And similarly, we've got our false
-accept rate, is equal to false positives divided by false positives plus true negatives. And the
-number in the bottom here is all the possible negatives that we should have, so the total of
-the true negatives plus those that we misclassified as positive.
+Clearly, in any biometric system, we want to maximise the true positives and minimise the false negatives. One way of modelling this information is to use an ROC curve. This stands for Receiver Operating Characteristic. Effectively, what this does is it maps our true acceptance rate (proportion of people who were accepted and should have been accepted) versus the false acceptance rate (proportion of people who were accepted, but shouldn't have been).
+
 We can map the value for a given biometric classifier on this graph shown here.
 
 ![ROC curve](./images/ROC_curve.png)
 
-On the $x$-axis, we have the false accept rate. And on the $y$-axis, we have the true accept rate. At the corner, we have the value $0$, and our maximum is going to be $1$ on both of these as we are working with a proportion of the whole.
+On the $x$-axis, we have the false acceptance rate. And on the $y$-axis, we have the true acceptance rate. At the corner, we have the value $0$, and our maximum is going to be $1$ on both of these as we are working with a proportion of the whole.
 
-When we look at our classifier effectively, what you're going to end up with is a score. You're going to look at the biometric that's provided. You're going to perform whatever transformations and calculations you need to complete, and then you need to make a
-judgement as to whether you accept that it matches the template or doesn't match the template. Now, this is normally done on a sliding scale. So on this sliding scale, we need to decide, at some point, at which point we'll say, OK, this is where we're going to accept that these two are similar enough in order to provide a positive result. Now clearly, this threshold can be moved around. You can say move this closer to zero. In which case, you're going to get more true positives because you're catching more people and saying that they're positive, but you are also going to increase your false positives because you're lowering that threshold for acceptance.
+When we look at our classifier effectively, what you're going to end up with is a score. You're going to look at the biometric that's provided. You're going to perform whatever transformations and calculations you need to complete, and then you need to make a judgement as to whether you accept that it matches the template or doesn't match the template. Now, this is normally done on a sliding scale. So on this sliding scale, we need to decide, at which point we'll say, OK, this is where we're going to accept that these two are similar enough in order to provide a positive result. Now clearly, this threshold can be moved around. You can say move this closer to zero. In which case, you're going to get more true positives because you're catching more people and saying that they're positive, but you are also going to increase your false positives because you're lowering that threshold for acceptance.
 
-In contrast, if you were to move this higher up, then you would get certainly lower false
-positives, because you have a higher standard to meet. However, you would also get lower
-true positives. You'll start to reject people who should be accepted. So it is a bit of a balance
-trying to find out where on that scale we want to place our threshold.
-On our ROC curve, if we were to take a particular biometric classifier or biometric system and
-plot the true accept rate and the false accept rate for all the different thresholds that we wish
-to look at, then we can make our ROC curve. Now, if we were to do something and it was
-basically random guessing, what we would end up with is a diagonal line up here. Then for
-our curve, if we start off at 0, then we'll end up with something which looks a little bit like this,
-where that's going to end up as 1 comma 1. This means that we can start to compare
-different systems because we can have curves which look a little more like that, or, indeed, a
-little more like this.
-Now, ignore my poor drawing skills. If you consider the three curves that we have here, I'd
-like you to take a minute to think instinctively what is the better system here. Well, the better
-system is the one that gives us a better true accept rate and a lower false accept rate. In this
-particular instance, this curve at the top here is performing better. We're getting a higher true
-acceptance rate for not much of an increase along our false accept rate.
-Whereas, this bottom curve, there's not terribly much movement there. It started to become
-closer to guesswork. Now clearly, there's a lot more that can be said about our ROC curves.
-But for our purpose, this is sufficient.
+In contrast, if you were to move this higher up, then you would get certainly lower false positives, because you have a higher standard to meet. However, you would also get lower true positives. You'll start to reject people who should be accepted. So it is a bit of a balance trying to find out where on that scale we want to place our threshold.
 
-***TIDY UP BEFORE THIS***
+On our ROC curve, if we were to take a particular biometric classifier or biometric system and plot the true accept rate and the false accept rate for all the different thresholds that we wish to look at, then we can make our ROC curve. Now, if we were to do something and it was basically random guessing, what we would end up with is a diagonal line up here. Then for our curve, if we start off at 0, then we'll end up with something which looks a little bit like this, where that's going to end up as $(1,1)$. This means that we can start to compare different systems because we can have curves with different shapes (see graph). If you consider the three curves, which is the better system?. Well, the better system is the one that gives us a better true accept rate and a lower false accept rate. In this particular instance, the curve at the top is performing better. We're getting a higher true acceptance rate for not much of an increase along our false accept rate.Whereas, this bottom curve, there's not terribly much movement there. It started to become closer to guesswork. 
+
+Now clearly, there's a lot more that can be said about our ROC curves, but for our purpose, this is sufficient.
 
 #### Further Biometrics
 
-***TO TIDY UP AFTER:***
+In this section we're going to take a slightly more in-depth look at some common physical biometrics as well as a high-level overview of behavioural biometrics. Biometrics offer the benefit of less cognitive load on the end user. You don't need to remember a range of passwords or other knowledge-based authentication. Instead, it's something which comes inherently with them, such as a fingerprint or an iris or retina scan. We'll take a little bit of a deeper look into fingerprints and iris and retina scans. 
 
-In this section we're going to take a slightly more in-depth look at some common physical biometrics as well as a high-level overview of behavioural biometrics. Biometrics offer the benefit of less cognitive load on the end user. You don't need to remember a range of passwords or other knowledge-based authentication. Instead, it's something which comes inherently with them, such as a fingerprint or an iris or retina scan. We'll take a little bit of a deeper look into fingerprints and iris and retina scans. However, biometrics is obviously a field in its own right. As a result, you can go very in-depth into these areas. So what we'll focus on today is a high-level level overview of how these different methodologies function, starting off with facial recognition.
+Note, biometrics is obviously a field in its own right. As a result, you can go very in-depth into these areas. So what we'll focus on today is a high-level level overview of how these different methodologies function, starting off with facial recognition.
 
-***TO TIDY UP BEFORE***
 
 ##### Facial recognition
 
 ***TO TIDY UP AFTER:***
 
-Whilst technology is certainly improving in this area, it's still by no means perfect. Recall that we have two possible uses or modes of operations with biometrics. We've either got identification, where you have a range of possible images and you're trying to identify an individual person within that. Or the verification, which is what we are focusing on, where there's a stored biometric, perhaps in a device, such as a mobile phone or tablet and you're just trying to verify that the identity claimed matches the one stored. With facial recognition, we're commonly looking at aspects such as features on the face like the distance between your eyes, the length of your nose, distance between the mouth and eyes, a variety of different focus points on the face. This can then be translated into a template when you are registering. Then, when you go to authenticate, it tries to extract this information again from the visual that it has and sees whether it closely matches the template stored in your database. There are a range of different options in terms of the algorithm used to implement this. One such algorithm as to use Eigenfaces. However, there are a variety of different algorithms out there. The NIST does regular testing of a range of different mechanisms, looking at aspects such as how effective the false accept rates and false reject rates are, and so forth. So there's a lot of data in that kind of field. One interesting area of facial recognition is around the diversity of the faces used to train such systems and algorithms. There has been a lot of research done at MIT which demonstrated that facial recognition was inherently biased, particularly towards white males. So it's clearly a field which has a lot of different facets and it's good to see that we've been moving forward in this area. There is, obviously, the privacy issues and we'll come back to speak a little bit about those later in the video. Real-world world use of facial recognition can be a little bit patchy. In particular, you've probably seen a number of news reports related to the use of facial recognition in crime settings and how individuals can be falsely registered as criminals. So clearly, there's a few things to consider there. It's also quite possible that in using facial recognition, you get a lot of false rejects. So as we improve, it's important to keep a balanced view on the benefits and the drawbacks of using such a system.
+Whilst technology is certainly improving in this area, it's still by no means perfect. 
+
+Recall that we have two possible uses or modes of operations with biometrics:
+* identification: where you have a range of possible images and you're trying to identify an individual person within that. 
+* verification, which is what we are focusing on, where there's a stored biometric, perhaps in a device, such as a mobile phone or tablet and you're just trying to verify that the identity claimed matches the one stored. 
+
+With facial recognition, we're commonly looking at aspects such as features on the face like the distance between your eyes, the length of your nose, distance between the mouth and eyes, a variety of different focus points on the face. This can then be translated into a template when you are registering. Then, when you go to authenticate, it tries to extract this information again from the visual that it has and sees whether it closely matches the template stored in your database. There are a range of different options in terms of the algorithm used to implement this. One such algorithm as to use Eigenfaces. However, there are a variety of different algorithms out there. The NIST does regular testing of a range of different mechanisms, looking at aspects such as how effective the false accept rates and false reject rates are, and so forth. So there's a lot of data in that kind of field. One interesting area of facial recognition is around the diversity of the faces used to train such systems and algorithms. There has been a lot of research done at MIT which demonstrated that facial recognition was inherently biased, particularly towards white males. So it's clearly a field which has a lot of different facets and it's good to see that we've been moving forward in this area. There is, obviously, the privacy issues and we'll come back to speak a little bit about those later in the video. Real-world world use of facial recognition can be a little bit patchy. In particular, you've probably seen a number of news reports related to the use of facial recognition in crime settings and how individuals can be falsely registered as criminals. So clearly, there's a few things to consider there. It's also quite possible that in using facial recognition, you get a lot of false rejects. So as we improve, it's important to keep a balanced view on the benefits and the drawbacks of using such a system.
 
 ***TO TIDY UP BEFORE:***
 
