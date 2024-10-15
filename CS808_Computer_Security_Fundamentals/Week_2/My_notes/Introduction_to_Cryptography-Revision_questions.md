@@ -17,5 +17,7 @@
 
 #### Cryptography Process
 
-1. Describe the Cryptography process is sending and receiving messages (with diagram)
+1. Describe the Cryptography process in sending and receiving messages (with diagram)
 1. State the two general classifications in cryptography
+
+### Crptographic Hash Functions
