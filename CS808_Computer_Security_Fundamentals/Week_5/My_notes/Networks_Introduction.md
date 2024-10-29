@@ -86,3 +86,7 @@ We conclude our overview of computer networks with some key components of the in
 * ***URL:*** Uniform Resource Locator (URL) IS a readable way of accessing an IP address for an internet resource. As a user, trying to remember an IP address in order to access a website is not a very practical way of working. So we have URLs to do this for us.
 * ***DNS:*** The domain name server (DNS), translates those URLs into the appropriate IP addresses.
 * ***ARP:*** The Address Resolution Protocol (ARP) translates IP addresses into MAC addresses. So again, information coming from the internet is going to have an IP address to try and get to your machine. But it's going to want locally a MAC address to go to that specific device.
+
+---
+
+Next: [Port and Router Vulnerabilities](Week_5/My_notes/Port_and_Router_Vulnerabilities.md)

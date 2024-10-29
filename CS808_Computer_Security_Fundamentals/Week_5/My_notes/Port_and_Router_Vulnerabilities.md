@@ -54,3 +54,7 @@ There are security options as well:
 * you can also block specific IP addresses through your router’s interface. Internet providers like Virgin or BT often provide web interfaces that allow you to configure your router's security settings easily.
 
 It's important to note that for certain attacks, such as packet sniffing, you have to be on the same network. So if you're looking at a building or an organisation that has a local area network, an attacker trying to gain access to that would have to get themselves onto that network before they're able to perform packet sniffing activities.
+
+---
+
+Next: [Server Vulnerabilities](Week_5/My_notes/Server_Vulnerabilities.md)

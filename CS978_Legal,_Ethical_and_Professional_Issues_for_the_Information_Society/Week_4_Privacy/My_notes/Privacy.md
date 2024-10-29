@@ -107,6 +107,16 @@ Wacks identifies seven shortcomings of privacy that are important to consider:
 
 ## Towards the protection of data
 
+### Background
+
+* Data protection began to concern society in the late 1960s and early 1970s when the dawn of
+new technologies made it possible for organisations to electronically store information on
+individuals.
+
+### Reasons data protection became a concern
+
+
+
 ## The cookie context
 
 ## The citizen factor

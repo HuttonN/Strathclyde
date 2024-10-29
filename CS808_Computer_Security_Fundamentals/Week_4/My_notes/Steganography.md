@@ -98,4 +98,8 @@ The straightforward LSB algorithm is very sequential in nature and can only be i
 
 To try and sort this issue we can incorporate some form of randomness. Using random number generators, with some form of seed so it's pseudo-random and can be replicated if we have the seed value, to determine the next position in which to hide information.
 
+---
+
+Next: [Access Control Introduction](Week_4/My_notes/Access_Control_Introduction.md)
+
 TO DO: READ ARTICLE

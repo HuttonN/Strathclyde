@@ -12,42 +12,10 @@ drawn.
 • A beetle is complete when one head, two wings, six legs, a head, two eyes and two antennae have
 been dawn. The game ends when the beetle is complete.
 • Additional body members beyond those required are not drawn"""
-"""
-import random
-
-def play_beetle():
-    
-    beetle_dict = {
-        "body": 0,
-        "head": 0,
-        "wing": 0,
-        "leg": 0,
-        "eye": 0,
-        "antenna": 0
-    }
-    
-    while beetle_dict["body"] == 0:
-        question = input("Roll the dice? (Y/N)")
-        if question == "Y":
-            roll = random.randint(1,6)
-            if roll == 6:
-                beetle_dict["body"] +=1
-                print("Congratulations! You drew a body")
-                break
-            else:
-                print (f"You rolled a {roll}. Nothing was drawn. Please try again")
-
-    while beetle_dict["head"] == beetle_dict["leg"] == beetle_dict["wing"] ==0:
-        question = input("Roll the dice? (Y/N)")
-        if question == "Y":
-            roll = random.randint(1,6)
-
-play_beetle()
-"""
 
 import random
 
-def play_beetle():
+def play_beetle(interactive=True):
     
     beetle_dict = {
         "anatomy":{
@@ -91,5 +59,56 @@ def play_beetle():
         "Drawn?": False
     }
 
-    while not beetle_dict["Drawn?"]:
+    def can_add_part(part):
+        dependency = beetle_dict["anatomy"][part]["dependencies"]
+        if dependency is None or beetle_dict["anatomy"][dependency]["count"] == beetle_dict["anatomy"][dependency]["max_no"]:
+            return beetle_dict["anatomy"][part]["count"] < beetle_dict["anatomy"][part]["max_no"]
+        return False
 
+    def check_completed():
+        beetle_dict["Drawn?"] = True
+        for part in beetle_dict["anatomy"]:
+            part_info = beetle_dict["anatomy"][part]
+            if part_info["count"] == part_info["max_no"]:
+                continue
+            beetle_dict["Drawn?"] = False
+
+    roll_count = 0
+
+    while not beetle_dict["Drawn?"]:
+        if interactive:
+            input("Press Enter to roll the dice")
+        roll = random.randint(1,6)
+        roll_count += 1
+        if interactive:
+            print(f"You rolled a {roll}")
+
+        part_drawn = False
+
+        for part in beetle_dict["anatomy"]:
+            part_info = beetle_dict["anatomy"][part]
+            if part_info["dice_value"] == roll and can_add_part(part):
+                part_info["count"] +=1
+                if interactive:
+                    print(f"You drew a {part}")
+                part_drawn = True
+                break
+        
+        if not part_drawn and interactive:
+            print("Nothing was drawn with this roll")
+        
+        check_completed()
+
+    if interactive:
+        print(f"Congratulations. You completed the game of beetle in {roll_count} rolls")
+
+    return roll_count
+
+def simulate_games(num_games):
+    total_rolls = 0
+    for _ in range(num_games):
+        total_rolls += play_beetle(interactive=False)
+    average_rolls = total_rolls/num_games
+    print(f"The average number of rolls to complete beetle in {num_games} games was {average_rolls}")
+
+play_beetle()

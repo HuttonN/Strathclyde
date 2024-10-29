@@ -50,3 +50,6 @@ This means it is not a single client making the requests or trying to overwhelm 
 
 A bot allows an attacker to have remote control over the infected computer. As a result, an individual might unknowingly be contributing to a distributed denial of service attack. A network of these infected computers is called a botnet. This highlights the importance of ensuring that your computers are free from any malware that might be enabling such activities.
 
+---
+
+Next: [Communication Vulnerabilities](Week_5/My_notes/Communication_Vulnerabilities.md)
