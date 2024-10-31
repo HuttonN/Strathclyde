@@ -51,3 +51,7 @@ In modern symmetric block ciphers, we often repeat a series of steps multiple ti
 Doing this achieves a similar goal to the Vigenere cipher, which had multiple cipher alphabets. In this instance, we're generating multiple keys from the original, so as to help hide the relationship between the plaintext and the ciphertext even further. 
 
 In the past, key schedules have been based primarily on relatively straightforward permutations and substitutions. However, in more recent cryptography, we're looking at more complex ways of generating a key schedule. However, we won't go into that in particular depth here. It's just important to recognise that a single key can be used to generate round keys.
+
+---
+
+Next: [AES, Blowfish and modes of operation](AES,_Blowfish_and_modes_of_operation.md)

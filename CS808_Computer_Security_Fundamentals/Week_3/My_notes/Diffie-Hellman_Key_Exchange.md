@@ -39,3 +39,7 @@ We now revisit Diffie-Hellman with numbers:
 $$B^{a} = (g^{b})^{a} \mod p = (g^{a})^{b} \mod = A^{b}$$
 
 * Even though Eve has access to $A$, $B$, and $g$ she's unable to derive the final secret key and doesn't have access to $a$ or $b$.
+
+---
+
+Next: [Introducing Public Key Cryptography](Introducing_Public_Key_Cryptography.md)

@@ -38,4 +38,4 @@ When we're looking at ciphers, there's two general classifications that you migh
 
 ---
 
-Next: [Cryptographic Hash Functions](Week_2/My_notes/Cryptographic_Hash_Functions.md)
+Next: [Cryptographic Hash Functions](Cryptographic_Hash_Functions.md)

@@ -17,3 +17,7 @@ There are a few things to highlight about public and private key pairs:
 
 * Whilst the natural assumption is that an entity would have only one public and private key pair, the reality is that there mau be multiple key pairs for a single entity. Some of these key pairs may also be ephemeral, that is they are for temporary use e.g. a single communication session over the internet.
 * Another point to note is that sometimes keys may be compromised (e.g. if stored on a server which is compromised) or otherwise lost. In such a situation the entity who owns the key pair needs to revoke their public key and generate a new key pair.
+
+---
+
+Next: [Cryptographic randomness and one-time pads](Cryptographic_randomness_and_one-time_pads.md)

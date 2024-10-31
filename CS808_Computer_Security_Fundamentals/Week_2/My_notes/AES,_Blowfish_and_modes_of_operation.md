@@ -44,3 +44,7 @@ In CBC the process is as follows:
 * this is then input to the encryption function to produce the first cipher text block
 * the next plain text block is XORed with the previous ciphertext block and input to the encryption function to produce the next cipher text block.
 * This process is then repeated for each subsequent plain text block.
+
+---
+
+Next: [Making Block Ciphers Usable - Message Authentication Codes](Making_Block_Ciphers_Usable-Message_Authentication_Codes.md)

@@ -10,4 +10,4 @@ For decryption in this particular example, we would repeat the same process. Eff
 
 ---
 
-Next: [Block Ciphers](Week_2/My_notes/Block_Ciphers.md)
+Next: [Block Ciphers](Block_Ciphers.md)

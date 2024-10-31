@@ -41,4 +41,4 @@ There are some limitations of cryptographic hash functions:
 
 ---
 
-Next: [Substitution Ciphers](Week_2/My_notes/Substitution_Ciphers.md)
+Next: [Substitution Ciphers](Substitution_Ciphers.md)

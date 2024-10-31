@@ -42,4 +42,4 @@ The idea then is that you put the second line after the first line. So effective
 
 ---
 
-Next: [Stream Ciphers](Week_2/My_notes/Stream_Ciphers.md)
+Next: [Stream Ciphers](Stream_Ciphers.md)

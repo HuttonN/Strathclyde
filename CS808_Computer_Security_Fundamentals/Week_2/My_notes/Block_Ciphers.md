@@ -25,4 +25,4 @@ Caveat: The above form of padding with a short message can potentially lead to a
 
 ---
 
-Next: [Feistal Structures](Week_2/My_notes/Feistal_Structures.md)
+Next: [Feistel Structures](Feistel_Structures.md)
