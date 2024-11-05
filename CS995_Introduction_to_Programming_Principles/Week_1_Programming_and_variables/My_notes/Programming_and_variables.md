@@ -1,5 +1,3 @@
-<link href="markdown-style.css"></link>
-
 # Programming and variables
 
 ## Introduction
