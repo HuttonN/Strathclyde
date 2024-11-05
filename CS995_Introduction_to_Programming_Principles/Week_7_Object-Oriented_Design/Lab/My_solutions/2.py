@@ -1,0 +1,1 @@
+"""Create a UML representation of the ElectricCar class, including the attributes, operations and visibility."""

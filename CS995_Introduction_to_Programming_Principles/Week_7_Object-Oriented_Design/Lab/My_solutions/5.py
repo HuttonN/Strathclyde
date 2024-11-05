@@ -1,0 +1,2 @@
+"""Add a __repr__(self) function to the Customer and Purchase classes to return the contents of the class
+as a string. The function should allow a new object to be created by using eval on the returned string"""
