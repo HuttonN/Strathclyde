@@ -22,7 +22,7 @@ Within the Vigenre cipher, we pick a key which doesn't have any repeated letters
 
 For example, say we use a keyword of ALICE and we want to encrypt the plaintext HELLO. Placing ALICE above HELLO we take the keyword value above each letter and look up our grid to get the correct ciphertext. Above H is A so we look up where row A intersect column H and we get H. Above E is L so we look up where the row L intersect the column E to obtain P. Repeating this process we finally obtain the ciphertext HPTNS.
 
-Another way of looking at the Vigenre cipher is to translate every letter and into a position number. 
+Another way of looking at the Vigenre cipher is to translate every letter into a position number. 
 
 ![Vigenere cipher](./images/Vigenere_cipher.png)
 

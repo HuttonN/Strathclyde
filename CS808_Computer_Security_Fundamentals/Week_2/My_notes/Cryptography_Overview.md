@@ -9,19 +9,18 @@ A cipher is effectively an algorithm which allows us to send a message across an
 There are three components:
 
 * **Plain text:** The unencrypted message. This is a message that if anyone were to intercept that, they would be able to read it irrespective of whether they have access to the key or not
-* **Key:** The key itself is the thing that allows us to apply the encryption. It's the
-secret information that allows us to encrypt and potentially decrypt that information as well.
+* **Key:** The key itself is the thing that allows us to apply the encryption. It's the secret information that allows us to encrypt and potentially decrypt that information as well.
 * **Ciphertext:** The bottom line here shows the ciphertext. Ciphertext is the result of applying encryption to the plain text using the key.
 
 The intention here is that if someone was to send a message over an insecure network, anyone intercepting that would not be able to read that message without the key.
 
 ## Sending messages
 
-Three of the key names that you might hear in relation to cryptography include Alice, Bob, and Eve. 
-
 ![Sending messages](./images/Alice_Bob_Eve.png)
 
-These are just traditional labels used to represent intended recipients, and the sender, as well as someone trying to intercept that message. So Alice is sending a message, Bob is receiving it or vice versa, and Eve is trying to intercept that message.
+* Alice is sending a message, 
+* Bob is receiving it or vice versa, 
+* Eve is trying to intercept that message.
 
 ## Cryptography Process
 

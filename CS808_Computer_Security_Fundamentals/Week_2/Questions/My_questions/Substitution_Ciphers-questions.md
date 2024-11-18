@@ -57,7 +57,7 @@ Say we use a keyword of ALICE and we want to encrypt the plaintext HELLO. Placin
 3. Describe another way of looking at the Vigenere cipher that is easier to code
 </summary>
 
-Another way of looking at the Vigenre cipher is to translate every letter and into a position number. 
+Another way of looking at the Vigenre cipher is to translate every letter into a position number. 
 
 ![Vigenere cipher](./images/Vigenere_cipher.png)
 

@@ -16,6 +16,8 @@ A cipher is effectively an algorithm which allows us to send a message across an
 1. State and describe the cryptographic components
 </summary>
 
+![Cryptography components](./images/Cryptography_components.png)
+
 * **Plain text:** The unencrypted message. This is a message that if anyone were to intercept that, they would be able to read it irrespective of whether they have access to the key or not
 * **Key:** The key itself is the thing that allows us to apply the encryption. It's the
 secret information that allows us to encrypt and potentially decrypt that information as well.
@@ -27,10 +29,8 @@ secret information that allows us to encrypt and potentially decrypt that inform
 <summary>
 2. What is the intention of a cryptographic message
 </summary>
-* **Plain text:** The unencrypted message. This is a message that if anyone were to intercept that, they would be able to read it irrespective of whether they have access to the key or not
-* **Key:** The key itself is the thing that allows us to apply the encryption. It's the
-secret information that allows us to encrypt and potentially decrypt that information as well.
-* **Ciphertext:** The bottom line here shows the ciphertext. Ciphertext is the result of applying encryption to the plain text using the key.
+
+The intention is that if someone was to send a message over an insecure network, anyone intercepting that would not be able to read that message without the key.
 </details>
 
 ## Sending messages
@@ -39,7 +39,7 @@ secret information that allows us to encrypt and potentially decrypt that inform
 
 <details>
 <summary>
-1. Describe a traditional crptographic set up when considering the sending of messages
+1. Describe a traditional cryptographic set up when considering the sending of messages
 </summary>
 
 Three of the key names that you might hear in relation to cryptography include Alice, Bob, and Eve. 

@@ -65,6 +65,8 @@ The output can be called a hash value or a digest
 
 </details>
 
+&nbsp;
+
 <details>
 <summary>
 2. Explain the distinction between second pre-image resistance and collision resistance
@@ -83,7 +85,10 @@ The output can be called a hash value or a digest
 1. Using an example, describe the purpose of cryptograpic hash functions
 </summary>
 
-You locate software you wish to download and install from a trusted secure website. On the website you are provided with a link to download the software and a hash value, as well as the specific hash function used to calculate that value. If you then independently calculate the hash value of the file downloaded using that function, and this matches the hash value provided on the website then you have confidence in the integrity of the file. If it were changed, e.g. by an attacker, then the hash value would not match and you would not install the software.
+* You locate software you wish to download and install from a trusted secure website. 
+* On the website you are provided with a link to download the software and a hash value, as well as the specific hash function used to calculate that value. 
+* If you then independently calculate the hash value of the file downloaded using that function, and this matches the hash value provided on the website then you have confidence in the integrity of the file. 
+* If it were changed, e.g. by an attacker, then the hash value would not match and you would not install the software.
 
 </details>
 
