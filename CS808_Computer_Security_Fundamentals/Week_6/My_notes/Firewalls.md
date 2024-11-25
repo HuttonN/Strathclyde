@@ -83,3 +83,7 @@ If we look at outbound packets when using proxy servers, if the proxy server sen
 * ***Host IP address hiding:*** add its own IP header to the packets, and then the sniffer would only see the IP address of the proxy, hence hiding internal hosts.
 * ***Header destruction:*** Another way to stop sniffing of the IP header is to employ header destruction. In this approach the firewall proxy destroys the packet header completely, and replaces it with its own IP header. 
 * ***Protocal enforcement:*** A possible limitation of a firewall which is using a packet filtering approach is that port numbers could potentially be spoofed. This means that when looking at the filtering rules, if they are looking for specific port numbers, then this could potentially be exploited. However, with a proxy firewall this isn't so easy to do, since it enforces particular protocols. For example, it ensures that port 80 is in fact HTTP, and deals with only one application per server. 
+
+---
+
+Next: [Demilitarized Zones and Intrusion Detection Systems](Demilitarized_Zones_and_Intrusion_Detection_Systems)

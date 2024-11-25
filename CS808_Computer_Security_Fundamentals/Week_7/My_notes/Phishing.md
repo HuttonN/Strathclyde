@@ -1,103 +1,106 @@
-# Phishing
+# Phishing Overview
 
-## Introduction to Phishing
+## Introduction
 
-In these notes, we're going to take a look at some examples of phishing. 
+Phishing is a type of **social engineering** where attackers attempt to:
 
-Phishing is a type of social engineering. Effectively, the attacker tries to get the target to disclose information about their login credentials. They can also be looking for information such as bank details, or they could be trying to get the end user to download some form of malware. 
+- Obtain sensitive information (e.g., login credentials, bank details).
+- Trick users into downloading malware.
 
-Phishing is a type of social engineering attack, a method used by attackers to manipulate individuals into disclosing sensitive information or performing actions that compromise their security. In phishing, the attacker typically aims to trick the target into sharing login credentials, bank details, or other personal information. Sometimes, the goal is also to persuade the target to download malware, which can further compromise the user’s device and data.
+The typical attack flow involves:
+1. The attacker sends an email with a link or attachment.
+2. The user clicks the link or downloads the attachment.
+3. The attacker:
+   - Collects sensitive information (e.g., credentials) from a fake website.
+   - Installs malware on the user's device (e.g., via a drive-by download).
 
-## Common Phishing techniques
+## Examples of Phishing
 
-The attack involves the attacker crafting an email with a malicious link that invites the user to click. When the user clicks the link,
-* they may be directed to a website that appears legitimate, prompting them to enter their login credentials or other sensitive information, which is then sent directly to the attacker.
-* it may trigger a drive-by download, where malware is automatically downloaded to the user’s device without their knowledge. 
+### Genuine Email Example
 
-In some cases, the email may also contain a malicious attachment that installs malware if opened.
+![Genuine email example](./images/Genuine_email_example.png)
 
-## Identifying Phishing Emails
+- Features:
+  - Contains multiple links and lacks identifying information, except a partial bank account number.
+  - The **Received From domain matches the From domain** in the email overview.
+- Conclusion: **Not phishing.**
 
-Lets look at some specific examples. 
+### Phishing Email Example 1
 
-## Example 1 
+![Phishing example 1](./images/phishing_example_1.png)
 
-***ADD IMAGE***
+![Phishing example 1 metadata](./images/phishing_example_1_metadata.png)
 
-This example is a genuine email. Despite the fact that it has a number of different links to click on, and there is a lack of identifying information, with the exception of a three digit partial bank account number, it is indeed genuine. If we look at the full details, the Received From domain matches the From domain, which is shown in the email overview.
+- Features:
+  - Sent in an unfamiliar language.
+  - Strange formatting and phrasing (e.g., links labeled "Wife," "Man," etc.).
+  - **From domain mismatch**: Email claims to be from "Bon Prix," but actual sender domain is "lemustdesdeals.com."
+- Explanation:
+  - Attackers can spoof the **From field** using an SMTP server and mailing software.
+  - SMTP (Simple Mail Transfer Protocol) allows any computer to send emails claiming to be from a specific source domain.
+- Mitigation: **Sender Policy Framework (SPF)** checks if the IP sending the email is authorized by the domain's SPF record.
 
-## Example 2
+### Phishing Email Example 2
 
-***ADD IMAGE***
+![Phishing example 2](./images/phishing_example_2.png)
 
-This is an example of phishing. First off, this is not a company that I've ever purchased from before. Second of all, it is sent in French, which is not my primary language, and certainly not a language that I claim to speak very well at all. You'll also notice that some of the language is a little bit strange. If you have a look at what the links are at the top, we have Wife, Man, Child, House, and Good Plans, which is a little bit strange. You'll also notice that there are some links there, and it's asking you to click on that link, which is also a little bit dubious. 
+![Phishing example 2 metadata](./images/phishing_example_2_metadata.png)
 
-But let's look at the full details of the original message within the email client.
+- Features:
+  - Lacks identifying information.
+  - Urgency (e.g., "login as soon as possible").
+  - Hovering over the provided link reveals it does not direct to the claimed domain.
+  - **Domain mismatch** between the Received From field and the From field.
+- Conclusion: **Phishing email.**
 
-***ADD IMAGE***
+### Spear Phishing
 
-You can do this in all email clients. In particular, for example, with Gmail, if you open a message, then look at your dropdown options, and say Show Original. If we look at the metadata at the top, we can see from the Received, it's from something called lemustdesdeals.com, not Bon Prix, as you would expect to see if it was authentic. 
+![Spear Phishing example](./images/spear_fishing_example.png)
 
-## Techniques Used in Phishing
+- Characteristics:
+  - Targets specific individuals using personalized information.
+  - Example: Job application email with an obfuscated URL (e.g., tinyURL).
+- Explanation:
+  - Spear phishing emails are harder to detect due to personalization.
+- Mitigation: **Vigilance and awareness.**
 
-You can spoof the From part in the message view. This can be relatively easy to do. All you need is an SMTP server, which is the protocol for e-mail, and the right sort of mailing software. You can then fill in the From part of the email. It may or may not get through. It depends on the receiving email server. Because SMTP, Simple Mail Transfer Protocol, allows any computer to send an email claiming to be from a source domain or address, those performing phishing attacks could then change the From part of address to look like it comes from an official domain. As a result
-of this, we had to find a solution.
-The sender policy framework, or SPF, provides a way for mail servers to verify that the IP
-address sending the email was indeed authorised to send email on behalf of the domain--
-so the domain being something like apple.com or google.com. The mail server receiving the
-email needs to compare the IP of the origin in the message with the IP listed and the SPF
-record for the email address' host. So for example, under Google, there will be a list of IP
-address ranges which have been identified by Google.
-The receiving email server can then check the IP against this list. If the IP doesn't match, it
-can be identified as spam and not originating from Google itself. Note that this is a somewhat
-simplified overview of this. There's clearly a little bit more to it. If you are interested, there's
-plenty of information out there to have a read through.
-But one thing to notice here is that it is the responsibility of the receiving email server. And as
-you might imagine, not all email servers do this, which is why I said it depends on the email
-server which is receiving it as to whether it will actually let through the email or not.
+## Common Techniques in Phishing
 
-## Advanced Phishing Techniques
+Phishing emails often use social engineering techniques, including:
 
-Let's have
-a look at another example.
-As you might expect, this one is indeed a phishing email. There is no identifying information.
-It's asking the end user to login as soon as possible. It provides a link which doesn't go to
-Apple, which you can see if you were to hover over it. It simply doesn't even look official. And
-we could see these issues backed up by the full detail of the message, where the domain in
-the Received From is not the same as the domain in the From field further down.
-And even looking at that From field, it's fairly apparent it's not an Apple domain. What we
-have shown here is an example of spear phishing. Spear phishing is where the attacker is
-targeting you specifically. It's not just spam, the same email sent two lots of different
-addresses, using something like a botnet. They tend to know a little bit about you specifically,
-and the email can be personalised with other information. The example shown here shows
-
-that somebody is trying to look for a job, and you've got a URL which is somewhat
-obfuscated, due to the use of tinyURL. Spear phishing is definitely a bit harder to detect.
-So it relies on your own vigilance. Upon clicking on some of the links within a phishing email,
-you may be downloading malware or perhaps going to a phishing website. These websites
-look very much like the legitimate websites. But the data is obviously going to the attackers.
-So if you provide credentials, that information is being communicated to the attackers, who
-can then go to the legitimate website and access your account. Hopefully you managed to
-get most of those right.
-But as you'll notice from the examples, some of these are not necessarily terribly easy to
-detect. And indeed, some legitimate emails can be misunderstood as phishing emails,
-because of how they are structured. 
-
-## Social Engineering Tactics in Phishing
-
-Some of the techniques used in phishing, as an example
-of social engineering, includes the typical social engineering behaviours--
-leveraging authority, impersonation, pressure and solution, and pretext. Why not see if you
-can identify any of these elements in examples which you might get through your work or
-through your own personal email? 
+- **Authority**: Impersonating a trusted entity (e.g., a bank, employer).
+- **Impersonation**: Posing as a legitimate organization or individual.
+- **Pressure and Solution**: Creating urgency (e.g., "Your account will be suspended unless...").
+- **Pretext**: Providing a convincing scenario to justify the request (e.g., account verification).
 
 ## Mitigating Phishing Attacks
 
-There are, of course, other ways of trying to mitigate
-phishing emails coming into your organisation or your personal email. If you're working within
-an organisation and you are somehow responsible for this kind of thing, then you might also
-want to look at raising stuff-awareness in training. There are penetration testers who perform
-social engineering testing. They can send phishing emails to your department employees and
-see whether they actually follow through.
-If they do follow through, then they can be followed up with, in order to train them not to do so
-in the future.
+1. **Raising Awareness**:
+   - Employee training to recognize phishing attempts.
+   - Penetration testers can simulate phishing attacks and provide follow-up training.
+
+2. **Technical Solutions**:
+   - Use of **SPF** to verify email sender authenticity.
+   - Employ tools to filter and block phishing emails.
+
+3. **Best Practices for Individuals**:
+   - **Verify links**: Hover over links to check the destination URL.
+   - Avoid downloading attachments from unknown sources.
+   - Report suspected phishing emails.
+
+## Risks of Clicking Phishing Links
+
+- **Malware Installation**:
+  - Drive-by downloads can install malware without the user's awareness.
+- **Credential Theft**:
+  - Phishing websites mimic legitimate ones to collect login credentials.
+
+## Key Takeaways
+
+- Phishing relies on human error, making user training critical.
+- Technical measures (e.g., SPF) can help mitigate phishing risks.
+- Vigilance is essential, as even legitimate emails can sometimes appear suspicious or be mistaken for phishing.
+
+---
+
+Next: [Advanced Persistent Threat](Advanced_Persistent_Threat)

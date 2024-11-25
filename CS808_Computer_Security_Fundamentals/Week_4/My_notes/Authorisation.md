@@ -4,10 +4,7 @@
 
 So far in our look at access control, we've looked at identification and authentication, so claiming an identity,verifying that you are that person. But we haven't looked at authorization.
 
-Authorization is the element that basically says, OK, you have access to the system, but are
-you permitted to complete this particular task? This could be access to particular files, or it
-could be access to a particular function within a system. Access control can be considered as
-the way of managing the authorization element of this process.
+Authorization is the element that basically says, OK, you have access to the system, but are you permitted to complete this particular task? This could be access to particular files, or it could be access to a particular function within a system. Access control can be considered as the way of managing the authorization element of this process.
 
 ## Access Control Models
 
@@ -23,17 +20,15 @@ You'll see on the diagram here we have four entities:
 * **Object:** resource being accessed (e.g. file or function)
 * **Reference Monitor:** the part of the system which verifies if the subject has the correct authorization levels for that particular object.
 
-We could attache the authorization element at the following:
+We could attach the authorization element at the following:
 * **Subject Level:** Defines what actions a subject is allowed to perform (e.g. Alice can read but not write)
 * **Object Level:** Defines what actions are permitted for an object (e.g. users can read but not alter)
 
 ### Unix Access Control
 
-There are, at a basic level, two access modes - observe and alter. However, the
-set of access modes are often a lot richer. 
+There are, at a basic level, two access modes - observe and alter. However, the set of access modes are often a lot richer. 
 
-We can have a look at one particular access model if we look at the Linux-based systems. Within
-this system, we have the operations:
+We can have a look at one particular access model if we look at the Linux-based systems. Within this system, we have the operations:
 * Read (`R`) 
 * Write (`W`)
 * Execute (`X`). 
@@ -69,8 +64,7 @@ There are two different types of privilege escalation attack:
 
 ### Vertical Privilege Escalation
 
-A vertical privilege escalation attack is where the attacker tries to move onto an account which has more access
-than they have. 
+A vertical privilege escalation attack is where the attacker tries to move onto an account which has more access than they have. 
 
 As an example, you could think of this as someone working with a university and trying to gain access to a user account for HR, which is going to have more access to the data relating to employee salaries.
 

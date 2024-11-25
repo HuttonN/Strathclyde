@@ -1,4 +1,4 @@
-# teganography - questions
+# Steganography - questions
 
 ## Introduction
 

@@ -12,7 +12,7 @@ One thing that it's important to point out is that there is always a chance of a
 
 ### Service request floods
 
-A service request flood is what we probably see on a more common basis. for example, with a website HTTP or HTTPS requests. Effectively, the server is overloaded with requests and is unable to deal with them and as a result shuts down.
+A service request flood is what we probably see on a more common basis, for example, with a website HTTP or HTTPS requests. Effectively, the server is overloaded with requests and is unable to deal with them and as a result shuts down.
 
 You can compare service request floods to being in a restaurant. Your waiter comes up and tries to serve you. However, that relies on people waiting their turn. They can serve one person and then move on to the next and manage them as they go. However, if everyone comes at the same time and are all asking the waiter simultaneously to give access to your particular favourite foods, then that server is going to be unable to deal with the load.
 

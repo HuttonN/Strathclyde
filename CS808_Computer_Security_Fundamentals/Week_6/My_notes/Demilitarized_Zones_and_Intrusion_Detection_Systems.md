@@ -45,3 +45,7 @@ The combination of these two technologies can be referred to as an IDPS technolo
         * redefining or identifying security policies. 
 
 It should be noted that IDPS systems can be implemented as part of a firewall. However, as with many things, this is only the first step. It can't stop a number of different issues, such as administrator misconfiguration, the insider threat, or social engineering. 
+
+---
+
+Next: [VPNs](VPNs)

@@ -66,3 +66,7 @@ So what can we do to try to mitigate the potential successful APT campaign.
 * ***Consider the role of the end user:*** And as a final option, you also want to look at the end user. Primarily social engineering is used as an entry point for attackers in advanced persistent threat. As a result, it's often helpful to look at supporting end users in behaving in a secure fashion. So things such as security awareness training can also help. 
 
 Of course, as with all security, there is no hard and fast foolproof way of securing against such an attack. All we can do is build up different layers of security.
+
+---
+
+Next: [Threat Modelling Overview](Threat_Modelling_Overview)

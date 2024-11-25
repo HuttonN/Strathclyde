@@ -5,8 +5,8 @@
 A biometric is a sufficiently distinct trait which can be measured, quantified, and stored in such a way as to allow authentication to happen for the end user.
 
 We can split it into two different categories:
-* ***physical biometrics:*** facial identification, fingerprint recognition, and so forth
-* ***behavioural biometrics:*** things like how you type
+* **physical biometrics:** facial identification, fingerprint recognition, and so forth
+* **behavioural biometrics:** things like how you type
 
 There are two stages when we look at biometric authentication - enrolment then operations:
 
@@ -131,10 +131,10 @@ Similarly, the verification process is as follows:
 
 ![Retina verification](./images/Retina_biometric_verification.png)
 
-***Advantages:***
+**Advantages:**
 * This is often thought as the pinnacle of physical biometrics, it is highly accurate. 
 
-***Disadvantages:***
+**Disadvantages:**
 * the retina can change with disease or age, so there's always the potential downfall of that changing. 
 * retinal scanning is generally considered more invasive than iris recognition, and as a result, this means that the end user may be less likely to use it. 
 
@@ -142,8 +142,7 @@ It can be used specifically in particularly high security situations where the c
 
 #### Fingerprint recognition
 
-This is probably one that you use on a daily basis. Many modern devices use a fingerprint
-sensor in order to unlock and lock them. 
+This is probably one that you use on a daily basis. Many modern devices use a fingerprint sensor in order to unlock and lock them. 
 
 ##### Fingerprint Patterns
 

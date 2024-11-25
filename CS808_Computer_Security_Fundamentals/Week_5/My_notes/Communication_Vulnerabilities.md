@@ -38,19 +38,73 @@ You can examine the details of traffic at a variety of levels using the software
 Here is a screenshot from Wireshark, and you can see that the destination, IP address, username, and password are all sent in clear text, or in the clear. And this means that this information could potentially be used for an attack. 
 
 ### Passive attacks
+
 Packet sniffing is what we call a passive attack. It allows the attacker to read information which wouldn't normally pass through their computer, without altering it.
 
 ## Man in the Middle attacks
 
+### What is a Man-in-the-Middle Attack?
 
+A **Man-in-the-Middle (MITM) attack** occurs when an attacker intercepts communication between two parties by tricking the victim's computer into connecting with the attacker’s device instead of the legitimate destination.
+
+The attacker acts as a relay, passing information between the victim and the legitimate recipient. This can allow the attacker to:
+- View sensitive data (e.g., credentials, personal information).
+- Modify the information in transit.
+
+### Example Scenario
+
+1. Victim connects to the attacker’s device, believing it is the legitimate server.
+2. The attacker establishes a connection with the real server.
+3. All communication between the victim and the server is passed through the attacker.
+
+### Methods Used in MITM Attacks
+
+MITM attacks are often achieved through **spoofing**, such as:
+- **ARP Spoofing** (on Local Area Networks).
+- **DNS Spoofing** (on the internet).
 
 ## Spoofing
 
+### ARP Spoofing
+
+**Address Resolution Protocol (ARP) spoofing** manipulates the mapping of IP addresses to MAC addresses on a Local Area Network (LAN).
+
+#### Process:
+1. The attacker’s MAC address is falsely associated with a legitimate IP address of another node on the network.
+2. Hosts on the LAN cache this spoofed ARP packet, causing data meant for the legitimate IP to be sent to the attacker instead.
+
+#### Tools Used:
+- Examples of ARP spoofing tools include:
+  - ARP Spoof
+  - Cain and Abel
+  - Ettercap
+
+### DNS Spoofing
+
+**Domain Name System (DNS) spoofing** manipulates DNS responses, causing traffic to be redirected to the attacker’s IP address.
+
+#### Process:
+1. A victim sends a DNS request to resolve a domain (e.g., `example.com`).
+2. The attacker intercepts the request and sends a false DNS response with their IP address as the answer.
+3. The victim connects to the attacker’s server instead of the legitimate one.
+
 ## Replay attacks
 
-In a replay attack, the attacker replays a stream of communication to one of the parties at a later time. So for example, if I was the attacker and I had monitored the transfer of the username and password to the legitimate server and I copied these packets, I could then potentially replay these at a later time. So even if it is encrypted or hashed, it doesn't matter because the packet is still going to be
-the same. 
+### What is a Replay Attack?
 
-![Replay attack](./images/Replay_attack.png)
+In a **replay attack**, an attacker intercepts communication and replays the intercepted packets to the server or client at a later time.
 
-So say Alice wants to sign into myrecipes.com, who asks for a username and password. Alice sends this, but the man-in the-middle manages to get that information. The attacker can then replay this by sending the authentication packets to myrecipes.com.
+### Example Scenario:
+
+1. The attacker captures a communication stream, such as a username and password being sent to a server.
+2. At a later time, the attacker replays the same stream, potentially gaining unauthorized access.
+
+Even if the data is encrypted or hashed, the packets remain the same and can be replayed unless additional protections (e.g., timestamps or nonces) are used.
+
+![Replay Attack](./images/Replay_attack.png)
+
+#### Real-World Example:
+Alice attempts to sign into `myrecipes.com` with her username and password:
+- Alice sends her credentials.
+- The MITM attacker intercepts this communication.
+- Later, the attacker replays these packets to `myrecipes.com`, bypassing authentication checks.

@@ -36,3 +36,7 @@ Packets are encrypted in one of two modes:
 * ***Tunnel mode:*** In tunnel mode, it's encrypted as it is transmitted through the tunnel.
 
 The encryption used obviously varies depending on the secure VPN implementation. So it may be making use of encryption, such as AES. 
+
+---
+
+Next: [Digital Certificates](Digital_Certificates)

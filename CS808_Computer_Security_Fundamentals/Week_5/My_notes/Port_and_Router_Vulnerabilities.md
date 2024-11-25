@@ -39,8 +39,7 @@ It's important to note that services running on ports may log connection attempt
 
 In contrast to a Vanilla scan, a Stealth (or Strobe) scan, looks for specific services and may limit itself to very specific ports. 
 
-A strobe scan is less likely to trigger an event that can be detected by a target system, because it's more particular about what type of services it accesses. One such technique is called
-fragmented packets. By splitting up the TCP header over several packets, it's harder for packet filters to detect the probe.
+A strobe scan is less likely to trigger an event that can be detected by a target system, because it's more particular about what type of services it accesses. One such technique is called fragmented packets. By splitting up the TCP header over several packets, it's harder for packet filters to detect the probe.
 
 #### Detection and Mitigation
 
