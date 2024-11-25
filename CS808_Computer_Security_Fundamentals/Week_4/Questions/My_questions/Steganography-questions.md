@@ -1,33 +1,73 @@
-# Steganography
+# teganography - questions
 
 ## Introduction
 
+&nbsp;
+<details>
+<summary>
+1. What is steganography
+</summary>
+
 Steganography is the art of hiding information in plain sight.
+</details>
 
-It's a concept which has been around since ancient Greece. In Histories of Herodotus, we see an example where someone wanted to get a message to say that the Persians were going to invade. To do this they took a tablet and removed the wax from that tablet, engraved a message on the wood, and then covered it up with wax. This meant that if a soldier intercepted them and had a look at the tablet, they couldn't see that there was a message hidden there.
+&nbsp;
+<details>
+<summary>
+2. Describe a historical example
+</summary>
 
-Steganography contrasts with cryptography:
+In Histories of Herodotus, we see an example where someone wanted to get a message to say that the Persians were going to invade. To do this they took a tablet and removed the wax from that tablet, engraved a message on the wood, and then covered it up with wax. This meant that if a soldier intercepted them and had a look at the tablet, they couldn't see that there was a message hidden there.
+</details>
+
+&nbsp;
+<details>
+<summary>
+3. How does steganography constrast with cryptography
+</summary>
 
 * ***Steganography:*** Hiding data within ordinary files to avoid detection
 * ***Cryptography:*** Message itself is not hidden, but is only readable with the correct key.
+</details>
 
-In modern day practice, steganography has obviously moved on. We make use of cover objects. These can include things such as digital images, which have quite a lot of redundant information. You'd be surprised at the amount of information that we can take away from a digital image and not perceive any differences with the naked eye. This makes a great cover object for steganography. There are a number of different algorithms which you can use to achieve this. But fundamentally, they take away that information which is unneeded by the human eye and replace it with the payload. 
+&nbsp;
+<details>
+<summary>
+4. Describe modern steganography
+</summary>
 
-So the general process for modern steganography is as follows:
+In modern day practice, steganography has obviously moved on. We make use of cover objects. These can include things such as digital images, which have quite a lot of redundant information. You'd be surprised at the amount of information that we can take away from a digital image and not perceive any differences with the naked eye. This makes a great cover object for steganography.
+</details>
 
-![Steganography process](./images/Steganography_process.png)
+&nbsp;
+<details>
+<summary>
+5. What, fundamentally, do steganography algorithms do
+</summary>
+
+Fundamentally, they take away that information which is unneeded by the human eye and replace it with the payload.
+</details>
+
+&nbsp;
+<details>
+<summary>
+6. Describe the general process for modern steganography
+</summary>
 
 * start with a cover object and payload (the information you want to hide)
 * take the payload and hide within the cover object
 * the resulting output is referred to as the stego object.
-
-The whole idea behind this is that the stego image should not be noticeably different from the original cover image.
+</details>
 
 ## LSB Algorithm
 
 ### Digital representation of images
 
-In this section we will look at a specific steganography algorithm - the least significant bit algorithm. This algorithm makes use of digital images specifically, but can be used with other cover objects.
+&nbsp;
+<details>
+<summary>
+1. Describe the make up of a 24 bit image
+</summary>
 
 Consider an uncompressed 24-bit image:
 
@@ -35,7 +75,25 @@ Consider an uncompressed 24-bit image:
 
 We have three different colour channels, with one byte representing each. That is eight bits representing a value of light related to red, green, and blue. So, an individual pixel is created from that byte of each of those different colour channels.
 
-The least significant bit within a given byte is the right most bit as the change in the right-most bit will cause a minimal change to the naked eye. To see this, lets look at an example, taking a decimal representation of a byte. 
+</details>
+
+&nbsp;
+<details>
+<summary>
+2. What is the least significant bit
+</summary>
+
+The least significant bit within a given byte is the right most bit as the change in the right-most bit will cause a minimal change to the naked eye.
+
+</details>
+
+&nbsp;
+<details>
+<summary>
+3. Illustrate the difference between the least and most significant bit 
+</summary>
+
+lets look at an example, taking a decimal representation of a byte. 
 
 ![Original byte](./images/Original_byte.png)
 
@@ -51,9 +109,15 @@ it's going to change much more substantially
 
 ![Comparison of pixels](./images/Comparison_of_pixels.png)
 
+</details>
+
 ### The Algorithm
 
-As you might imagine, the LSB algorithm uses the benefit of the very minor adjustment discussed above.
+&nbsp;
+<details>
+<summary>
+1. Outline the algorithm
+</summary>
 
 * go through the payload bit by bit
 * For each bit of the payload, compare it to the least significant bit (LSB) of the current pixel (or byte) in the cover image
@@ -66,14 +130,26 @@ As you might imagine, the LSB algorithm uses the benefit of the very minor adjus
 
 Note: you are not always changing the LSB values, only when it doesn't match the payload
 
-There are a few things that can trip people up when trying to implement the algorithm:
+</details>
+
+&nbsp;
+<details>
+<summary>
+2. Describe some things which can trip people up when implementing the algorithm
+</summary>
 
 * You need to know when to stop extracting the hidden message from the cover image.
 * When sending a message using a steganography program, it’s important to determine the point where the message ends and the rest of the cover image data starts.
 * If you're hiding digital files (not just strings), you need to be aware of the file extension of the hidden data to handle it correctly after extraction.
 * For a robust implementation, you must come up with a consistent way to ensure you can determine the end of the hidden message and any associated file metadata (such as the extension) before completing the program.
 
-There are ways of completing the bit manipulation operations within different programming languages, e.g. in Java:
+</details>
+
+&nbsp;
+<details>
+<summary>
+3. Describe the implementation of the algorithm in Java
+</summary>
 
 ![Bit manipulation in Java](./images/Bit_manipulation_in_Java.png)
 
@@ -92,12 +168,26 @@ There are ways of completing the bit manipulation operations within different pr
 
 The final three lines describe other operations which can be useful in implementing the algorithm in Java
 
+</details>
+
 ### Issues with least significant bit
+
+&nbsp;
+<details>
+<summary>
+1. Describe an issue with the LSB algorithm
+</summary>
 
 The straightforward LSB algorithm is very sequential in nature and can only be implemented in a certain number of ways. 
 
+</details>
+
+&nbsp;
+<details>
+<summary>
+2. How can the issue be sorted
+</summary>
+
 To try and sort this issue we can incorporate some form of randomness. Using random number generators, with some form of seed so it's pseudo-random and can be replicated if we have the seed value, to determine the next position in which to hide information.
 
----
-
-Next: [Access Control Introduction](Week_4/My_notes/Access_Control_Introduction.md)
+</details>

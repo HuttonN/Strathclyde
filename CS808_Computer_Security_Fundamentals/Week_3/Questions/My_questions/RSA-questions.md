@@ -1,14 +1,25 @@
-# RSA
+# RSA questions
 
 ## Introduction
 
-In this section we'll look at the RSA algorithm, a modern example of public key cryptography. This is used in modern cryptography in tools such as VPNs. The details of the algorithm are below. Note: there have been variations on the RSA algorithm, but we will look at the one originally published.
+&nbsp;
+<details>
+<summary>
+1. What is RSA used for
+</summary>
+
+This is used in modern cryptography in tools such as VPNs.
+</details>
 
 ## Key generation
 
-We will first look at the algorithm for generating keys with reference to an example. 
-
 ### The Algorithm
+
+&nbsp;
+<details>
+<summary>
+1. Describe the algorithm for key generation
+</summary>
 
 * Identify two large, distinct primes, $p$ and $q$.
 * Calculate the product $n=pq$. As discussed before, it is then very difficult to prise apart the individual values of $p$ and $q$ from the final product as long as $p$ and $q$ are sufficiently large.
@@ -31,12 +42,17 @@ $$e \times d \mod \phi (n) =1$$
     
 $d$ is then the private key in combination with $n$. It is computationally infeasible to compute $d$ from $e$ and $n$ alone.
 
+</details>
+
 ### Example
 
-To illustrate how RSA works for key generation, we will use a toy example. Note: This example is not practical for real-world encryption but helps to demonstrate the algorithm.
+&nbsp;
+<details>
+<summary>
+1. Work through a key generation example
+</summary>
 
 1. Select two distinct primes:
-
     * $p=5$, $q=11$.
 1. Calculate $n$:
     * $n=p×q=5×11=55$.
@@ -54,14 +70,17 @@ To illustrate how RSA works for key generation, we will use a toy example. Note:
 1. We then have the following key pair:
     * **Public Key:** $(e,n) = (7,55)$.
     * **Private Key:** $(d,n) = (23,55)$.
+</details>
 
 ## Encryption and Decryption
 
-Having seen how to generate our mathematically linked public and private key pair, we need to see how this is applied to encryption and decryption.
-
 ### Encryption
 
-To encrypt a message:
+&nbsp;
+<details>
+<summary>
+1. Describe how a message is encrypted
+</summary>
 
 1. Split the message into blocks:
     * For simplicity, let’s encrypt a single letter: $B$.
@@ -72,10 +91,15 @@ To encrypt a message:
     * Calculate: $2^{7} = 128$, and $128 \mod 55 =18$
 1. Ciphertext:
     * $C=18$.
+</details>
 
 ### Decryption
 
-To decrypt a message:
+&nbsp;
+<details>
+<summary>
+1. Describe how a message is decrypted
+</summary>
 
 1. Apply the decryption formula:
     * $M = C^{d}\mod n$, where $C$ is the ciphertext block
@@ -84,5 +108,4 @@ To decrypt a message:
         * $18^{23}\mod 55 \equiv 2$ (restoring the original plaintext $M=2$).
 1. Plaintext:
     * Decrypting $C=18$ yields $M=2$, which corresponds to $B$.
-
-Next: [Cryptographic randomness and one-time pads](Cryptographic_randomness_and_one-time_pads.md)
+</details>

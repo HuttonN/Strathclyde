@@ -1,16 +1,39 @@
-# Diffie-Hellman Key Exchange
+# Diffie-Hellman Key Exchange - questions
 
 ## Introduction
 
-When looking at symmetric encryption and decryption, we've yet to answer a crucial question: How do both parties share a key in a secure manner? This could be done physically but often this won't be practical. What we need is a key exchange algorithm.
+&nbsp;
+<details>
+<summary>
+1. What have we not yet looked at in the context of encryption and decryption
+</summary>
 
-The Diffie-Hellman key exchange algorithm provides a way of generating a shared secret key over an insecure channel, which can then be used to encrypt future communications. The use of mathematics allows two parties to generate a shared secret in such a way that even if an interceptor or attacker observes the information exchanged, they would not be able to derive the shared key.
+When looking at symmetric encryption and decryption, we've yet to answer a crucial question: How do both parties share a key in a secure manner? This could be done physically but often this won't be practical.
+ 
+</details>
+
+&nbsp;
+
+<details>
+<summary>
+2. What do we need
+</summary>
+What we need is a key exchange algorithm.
+</details>
 
 ## With colours
 
-Lets first look at the algorithm at a high level using colours.
+&nbsp;
 
-* Alice and Bob each pick a private colour. At no point do either send these private colours over the public communicationj channel (Eve can't see).
+<details>
+<summary>
+1. Go through the Diffie-Hellman Key Exchange at a high level using colours
+</summary>
+This process is summarised in the following:
+
+![Diffie-Hellman colours](./images/Diffie_Hellman_colours.webp)
+
+* Alice and Bob each pick a private colour. At no point do either send these private colours over the public communication channel (Eve can't see).
 * A public colour is agreed upon. Eve can access the public colour at any point, as can Alice and Bob.
 * Both Alice and Bob combine the public colour with their own private colours. This results in private colours that can't be seperated into their component colours. Even though Eve has access to the public colour it is computationally infeasible to try an extract what Alice or Bob's private colours were.
 * Alice and Bob share the colours consisting of their own private colour and the public colour with each other.
@@ -19,14 +42,16 @@ Lets first look at the algorithm at a high level using colours.
     * Bob's colour
     * The public colour
 * We need part of a secret to generate that final key but Eve is never going to be able to access either one of those from the information that she has available to her
-
-This process is summarised in the following:
-
-![Diffie-Hellman colours](./images/Diffie_Hellman_colours.webp)
+</details>
 
 ## With mathematics
 
-We now revisit Diffie-Hellman with numbers:
+&nbsp;
+
+<details>
+<summary>
+1. Go through the Diffie-Hellman Key Exchange with numbers
+</summary>
 
 ![Diffie-Hellman numbers](./images/Diffie_Hellman_numbers.png)
 
@@ -41,7 +66,4 @@ We now revisit Diffie-Hellman with numbers:
 $$B^{a} = (g^{b})^{a} \mod p = (g^{a})^{b} \mod = A^{b}$$
 
 * Even though Eve has access to $A$, $B$, and $g$ she's unable to derive the final secret key and doesn't have access to $a$ or $b$.
-
----
-
-Next: [Introducing Public Key Cryptography](Introducing_Public_Key_Cryptography.md)
+</details>

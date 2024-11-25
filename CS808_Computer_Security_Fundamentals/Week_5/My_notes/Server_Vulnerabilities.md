@@ -52,4 +52,4 @@ A bot allows an attacker to have remote control over the infected computer. As a
 
 ---
 
-Next: [Communication Vulnerabilities](Week_5/My_notes/Communication_Vulnerabilities.md)
+Next: [Communication Vulnerabilities](Communication_Vulnerabilities.md)

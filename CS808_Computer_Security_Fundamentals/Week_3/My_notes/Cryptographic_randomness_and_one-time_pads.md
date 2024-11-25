@@ -34,7 +34,7 @@ As an example, lets look at the middle squared method which was developed by Von
 * line it up in the middle
 * extract the middle part
 
-This gives the next values which can then be used to repeat the process. If the number doesn't have an even number of digits it can be padded. Eventually, the numbers will repeat but it could take a very long time. The point at which numbers begin to repeat in a PRNG is called the PRNG. There are some PRNGs that are so long that they don't have any practical implications
+This gives the next values which can then be used to repeat the process. If the number doesn't have an even number of digits it can be padded. Eventually, the numbers will repeat but it could take a very long time. The point at which numbers begin to repeat in a PRNG is called the period. There are some PRNGs that are so long that they don't have any practical implications
 
 ---
 

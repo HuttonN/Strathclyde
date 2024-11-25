@@ -21,7 +21,6 @@ Both hubs and switches can be exploited using packet sniffing
     * Switches are designed to be more secure because they only send packets to the device that is the intended recipient. Each device on the network receives only the data that is meant for it, reducing the ability to sniff traffic.
     * However, certain attacks can overload switches, forcing them into "promiscuous mode" and acting like hubs. This is because a hub sends all the packets to all the hosts on a network. Switches send packets to the correct nodes. However, some switches can reduce themselves to hubs, and hence, become susceptible to sniffing. 
     
-
 One important thing to note is that what we commonly call a router these days is actually a combination of multiple things, such as the router, modem, a switch, and a wireless access point. 
 
 ### Example tools
