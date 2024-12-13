@@ -12,6 +12,7 @@
 * End-To-End Encryption
 </details>
 
+&nbsp;
 
 ## Server-Mediated Encryption
 

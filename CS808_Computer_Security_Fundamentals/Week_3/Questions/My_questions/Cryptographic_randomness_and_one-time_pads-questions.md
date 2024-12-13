@@ -8,7 +8,8 @@
 1. What does it mean for something to be truly random
 </summary>
 
-To be truly random means that there is no way to predict an event, such as a number series. This means that there are no discernible patterns.
+* To be truly random means that there is no way to predict an event, such as a number series.
+* This means that there are no discernible patterns.
  
 </details>
 
@@ -29,7 +30,8 @@ To identify a truly random number is to pick a number from a set, where each num
 3. What is used for randomness in cryptography
 </summary>
 
-In cryptography, pseudo-random number are used. Pseudo random number generators (PRNG) are algorithms which produce a series of numbers which appear random.
+* In cryptography, pseudo-random numbers are used.
+* Pseudo random number generators (PRNG) are algorithms which produce a series of numbers which appear random.
  
 </details>
 
@@ -39,8 +41,8 @@ In cryptography, pseudo-random number are used. Pseudo random number generators 
 <summary>
 4. What do PRNGs use to produce random numbers
 </summary>
-
-To do so, they make use of an initial seed value, a number which starts the generation of subsequent values. 
+&nbsp;
+They make use of an initial seed value, a number which starts the generation of subsequent values. 
  
 </details>
 

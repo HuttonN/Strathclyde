@@ -16,7 +16,8 @@ Digital signatures give us a digital equivalent to a handwritten signature
 2. How are digital signatures better
 </summary>
 
-Whereas a handwritten signature can easily be forged, a well-designed and implemented digital signature cannot. A digital signature gives us some assurance in terms of the integrity of the message, as well as some origin authentication.
+* Whereas a handwritten signature can easily be forged, a well-designed and implemented digital signature cannot. 
+* A digital signature gives us some assurance in terms of the integrity of the message, as well as some origin authentication.
  
 </details>
 
@@ -53,7 +54,8 @@ Whereas a handwritten signature can easily be forged, a well-designed and implem
 5. How do we get around the difficulties with especially large or small messages
 </summary>
 
-We use cryptographic hash functions, which allows us to take any length input and provide a fixed length output. Common lengths are 128-bit to 256-bit and so on.
+* We use cryptographic hash functions, which allows us to take any length input and provide a fixed length output. 
+* Common lengths are 128-bit to 256-bit and so on.
  
 </details>
 
@@ -63,9 +65,9 @@ We use cryptographic hash functions, which allows us to take any length input an
 6. What important properties do hashes have
 </summary>
 
-* Determinant: The same message will always result in the same output. It shouldn't ever be the case that the same message can go to multiple outputs.
-* Collision resistance: For it to be crptographically secure, we need to be sure that we avoid the case where lots of different messages result in the same final output.
-* One-way property: It should be really difficult to go backwards. That is, if we have the output or hash value, it must be computationally infeasible to then determine what the origianl input was.
+* **Determinant:** The same message will always result in the same output. It shouldn't ever be the case that the same message can go to multiple outputs.
+* **Collision resistance:** For it to be crptographically secure, we need to be sure that we avoid the case where lots of different messages result in the same final output.
+* **One-way property:** It should be really difficult to go backwards. That is, if we have the output or hash value, it must be computationally infeasible to then determine what the orignanl input was.
  
 </details>
 

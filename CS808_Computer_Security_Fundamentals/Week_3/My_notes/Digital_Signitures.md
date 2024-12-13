@@ -25,4 +25,6 @@ Hashes have a number of important properties:
 
 Going back to our example, instead of sending the message as is, which could be problematic for the reasons given above, we can take that message and put it through a cryptographically secure hash function to get our output, which can be referred to as our message digest
 
+---
+
 Next: [End-To-End Encryption](End-To-End_Encryption.md)
