@@ -97,3 +97,9 @@ In the previous session, we explored:
 ---
 
 Next steps: Continue exploring additional methods and interactions to deepen your understanding of object behavior in BlueJ.
+
+---
+
+Next: 
+* [Chapter 1, Sections 1.3 and 1.4](Textbooks/Objects_First_with_Java/Chapter_1_Objects_and_Classes.pdf)
+* [Instances, attributes, state and multiple instances](Instances,_attributes,_state_and_multiple_instances.md)

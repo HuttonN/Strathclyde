@@ -129,3 +129,9 @@ Objects and classes form the foundation of object-oriented programming:
 * Classes serve as templates for creating objects.
 * Methods allow interaction with and between objects.
 * Objects can have unique states, even when created from the same class.
+
+---
+
+Next: 
+* [Chapter 1, Sections 1.1 and 1.2](Textbooks/Objects_First_with_Java/Chapter_1_Objects_and_Classes.pdf)
+* [Objects, methods and parameters](Objects,_methods_and_parameters.md)

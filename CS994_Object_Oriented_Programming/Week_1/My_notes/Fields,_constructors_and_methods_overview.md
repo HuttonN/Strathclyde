@@ -129,3 +129,8 @@ public TicketMachine(int cost) {
   - **Mutator Methods**: Change the object's state by updating fields.
 - **Conventions**:
   - Following the tradition of placing fields first, followed by constructors and methods, improves code readability and maintainability.
+
+---
+
+Next: 
+* [Fields](Fields.md)

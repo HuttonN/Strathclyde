@@ -146,5 +146,7 @@ The `Student` class includes several methods, categorized as follows:
 
 ---
 
-This concludes the video on return values and objects as parameters.
+Next: 
+* [Chapter 1, Sections 1.12 to 1.14](Textbooks/Objects_First_with_Java/Chapter_1_Objects_and_Classes.pdf)
+* Chapter 1 summary
 

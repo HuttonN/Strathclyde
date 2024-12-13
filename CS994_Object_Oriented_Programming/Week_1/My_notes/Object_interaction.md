@@ -125,4 +125,6 @@ In this video, we're exploring how objects in Java interact with each other usin
 
 ---
 
-This concludes the video on object interaction.
+Next: 
+* [Chapter 1, Sections 1.9 to 1.11](Textbooks/Objects_First_with_Java/Chapter_1_Objects_and_Classes.pdf)
+* [Return values and objects as parameters](Return_values_and_objects_as_parameters.md)

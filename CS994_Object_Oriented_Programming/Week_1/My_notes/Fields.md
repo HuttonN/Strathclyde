@@ -68,3 +68,12 @@ To access the value of a field, use the corresponding getter method.
   - Require getter and setter methods for access and modification.
 - **Field Values in Instances**:
   - Each object instance has its own unique values for the fields, even if they share the same class.
+
+---
+
+Next: 
+* [Constructors, parameters and assignment](Constructors,_parameters_and_assignment.md)
+* Relevant reading:
+    * [Chapter 2, Section 2.4 Fields, constructors, and methods](Textbooks/Objects_First_with_Java/2.4_Fields_constructors_and_methods.pdf)
+    * [Chapter 2, Section 2.5 Parameters: receiving data](Textbooks/Objects_First_with_Java/2.5_Parameters_receiving_data.pdf)
+    * Chapter 2, Section 2.6 Assignment (read online)

@@ -118,3 +118,11 @@ A typical Java class has three main components:
   - The **class header** specifies accessibility (`public`) and the class name.
   - The **constructor** initializes fields, demonstrating good programming practice.
   - The **methods** provide functionality such as retrieving values, modifying fields, and performing actions.
+
+---
+
+Next: 
+* Relevant reading:
+    * [Chapter 2, Section 2.2 Examining a class definition](Textbooks/Objects_First_with_Java/2.2_Examining_a_class_definition.pdf)
+    * Chapter 2, Section 2.3 The class header (read online)
+* [Fields, constructors and methods overview](Fields,_constructors_and_methods_overview.md)

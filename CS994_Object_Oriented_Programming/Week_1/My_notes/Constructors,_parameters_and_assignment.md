@@ -73,3 +73,10 @@ In this video, we explore **constructors** by examining the `TicketMachine` clas
   - It initializes `balance` and `total` to `0`.
 - After execution, the constructor discards any local parameters, leaving only the class fields.
 
+---
+
+Next: 
+* [Methods and accessor/mutator methods](Methods_and_accessor_or_mutator_methods.md)
+* Relevant reading:
+    * Chapter 2, Section 2.7 Methods (read online)
+    * Chapter 2, Section 2.8 Accessor and mutator methods (read online)

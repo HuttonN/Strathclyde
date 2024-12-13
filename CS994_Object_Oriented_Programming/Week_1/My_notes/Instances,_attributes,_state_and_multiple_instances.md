@@ -93,3 +93,9 @@ diameter: 68 xPosition: 210 yPosition: 90 colour: blue visible: true
 - **Multiple Instances**: Multiple objects of the same class can coexist and behave independently, maintaining their own attributes and state.
 - **Object State**: Attributes such as position, size, colour, and visibility define an object’s state and can be modified via methods or inspected using BlueJ’s object inspector.
 - **Visibility**: Even invisible objects retain their state, with the `visible` attribute set to `false`.
+
+---
+
+Next: 
+* [Chapter 1, Sections 1.5 to 1.8](Textbooks/Objects_First_with_Java/Chapter_1_Objects_and_Classes.pdf)
+* [Object interaction](Object_interaction.md)

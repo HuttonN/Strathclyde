@@ -126,3 +126,8 @@ There are **8 primitive data types** in Java, each designed for specific use cas
   - A **default value**.
   - A **specific range** and **use case**.
 - Using the appropriate data type helps manage memory efficiently and ensures precision in calculations.
+
+---
+
+Next: 
+* [Exploring the ticket machine project](Exploring_the_ticket_machine_project.md)

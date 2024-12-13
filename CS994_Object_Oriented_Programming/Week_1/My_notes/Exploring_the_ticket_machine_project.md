@@ -91,3 +91,8 @@ In this Week 2 video, we explore the **Ticket Machine** project from Chapter 2 o
   - **Getter Methods**: Retrieving information about an object’s state.
   - **Inspecting Objects**: Viewing and confirming attributes using BlueJ’s inspect tool.
 - This short video introduces the basic functionality of the `TicketMachine` class. We will revisit this project later for further exploration.
+
+---
+
+Next: 
+* [Anatomy of a Java class and class headers](Anatomy_of_a_Java_class_and_class_headers.md)
