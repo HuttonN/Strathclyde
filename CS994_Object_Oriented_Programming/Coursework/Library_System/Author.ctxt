@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Author
+comment0.text=\n\ ------------------------\n\ Author\ class\n\ ------------------------\n\ \n\ Class\ to\ represent\ the\ author\ of\ a\ LibraryResource\n\ \n\ Has\ the\ following\ fields\:\n\ \ -\ firstName\:\ String\ for\ the\ first\ name\ of\ the\ author\n\ \ -\ surname\:\ String\ for\ the\ surname\ of\ the\ author\n\ \ -\ address\:\ String\ to\ represent\ the\ address\ of\ the\ author\ (ADD\ FURTHER\ NOTES)\n\ \ \n\ Has\ the\ following\ accessor\ methods\:\n\ \ -\ getFirstName\:\ method\ to\ return\ the\ first\ name\ of\ the\ author\n\ \ -\ getSurname\:\ method\ to\ return\ the\ surname\ of\ the\ author\n\ \ -\ getAddress\:\ method\ to\ return\ the\ address\ of\ the\ author\n\ \ -\ printDetails\:\ method\ to\ print\ all\ the\ details\ of\ the\ author\ (TO\ BE\ IMPLEMENTED,\ PERHAPS\ RENAME\ TO\ printAuthorDetails)\n\ \ \n\ Has\ the\ following\ mutator\ methods\:\n\ \ -\ setFirstName\:\ method\ to\ set\ the\ first\ name\ of\ the\ author\n\ \ -\ setSurname\:\ method\ to\ set\ the\ surname\ of\ the\ author\n\ \ -\ setAddress\:\ method\ to\ set\ the\ address\ of\ the\ author\n\ \n\ @author\ (Neil\ Hutton)\n\ @version\ (6\ December\ 2024)\n
+comment1.params=firstName\ surname\ address
+comment1.target=Author(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Author\n
+comment2.params=
+comment2.target=java.lang.String\ getFirstName()
+comment2.text=\n\ Accessor\ methods\n
+comment3.params=
+comment3.target=java.lang.String\ getSurname()
+comment4.params=
+comment4.target=java.lang.String\ getAddress()
+comment5.params=firstName
+comment5.target=void\ setFirstName(java.lang.String)
+comment5.text=\n\ Mutator\ methods\n
+comment6.params=surname
+comment6.target=void\ setSurname(java.lang.String)
+comment7.params=address
+comment7.target=void\ setAddress(java.lang.String)
+comment8.params=
+comment8.target=void\ printDetails()
+numComments=9

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=LibraryResource
+comment0.text=\n\ ------------------------\n\ LibraryResource\ class\n\ ------------------------\n\ \n\ Has\ the\ following\ accessor\ methods\:\n\ \ -\ getTitle\:\ returns\ the\ title\ of\ the\ LibraryResource\n\ \n\ Has\ the\ following\ mutator\ methods\:\n\ \ -\ setTitle\:\ method\ to\ set\ the\ title\ of\ the\ LibraryResource\n\n\ @author\ (Neil\ Hutton)\n\ @version\ (6\ December\ 2024)\n
+comment1.params=title
+comment1.target=LibraryResource(java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LibraryResource.\n
+comment2.params=
+comment2.target=java.lang.String\ getTitle()
+comment2.text=\n\ ------------------------\n\ Accessor\ methods\n\ ------------------------\n
+comment3.params=
+comment3.target=void\ setTitle()
+comment3.text=\n\ ------------------------\n\ Mutator\ methods\n\ ------------------------\n
+comment4.params=
+comment4.target=void\ printDetails()
+numComments=5
