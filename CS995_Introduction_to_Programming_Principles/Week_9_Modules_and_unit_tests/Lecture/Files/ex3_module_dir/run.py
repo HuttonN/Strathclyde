@@ -1,6 +1,6 @@
 from my_module import functions
 from my_module import more_functions
-import my_module
+import my_module 
 
 
 """

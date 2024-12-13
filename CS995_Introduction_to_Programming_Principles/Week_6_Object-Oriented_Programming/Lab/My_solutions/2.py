@@ -8,16 +8,34 @@ The constructor should use a shallow copy to copy the input solar_panels to a da
 • Add a member function to the SolarArray class that returns the total power of the solar array, by
 looping over the SolarPanel objects and summing their power values."""
 
+import copy
+
 class SolarPanel:
+    """
+    A class to represent a solar panel
+    """
+
     def __init__(self, serial_number, power):
-        self.serial_number = serial_number
+        self.serial_number = str(serial_number)
         self.power = power
 
+
 class SolarArray:
+    """
+    A class to represent an array of solar panels
+    """
+
     def __init__(self, x, y, solar_panels = []):
-        self.x = x
-        self.y = y
-        self.solar_panels = list(solar_panels)
+        self.x
+        self.y
+        self.solar_panels = copy.copy(solar_panels)
 
     def total_power(self):
-        return sum (panel.power for panel in self.solar_panels)
+        """
+        A function to calculate the total power of the solar panels that are in the array
+        """
+
+        total = 0
+        for solar_panel in self.solar_panels:
+            total += solar_panel.power
+        return total

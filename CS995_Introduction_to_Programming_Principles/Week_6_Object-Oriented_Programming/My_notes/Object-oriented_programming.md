@@ -28,14 +28,31 @@ class ClassName:
 
 #### Example: A Simple Class
 
+```python
+class Car: 
+    def init(self, make, model): 
+        self.make = make 
+        self.model = model
+
+    def description(self):
+        return f"{self.make} {self.model}"
+```
+
 ### The `__init__` Method (Constructor)
 
 A constructor is a function which is called when you want an instance of a class. The ```__init__``` method in Python is used to initialize an object's state when it's created. Other programming languages use more conventional names for constructors, but Python uses ```__init__```. Another 'odd' thing about Python is that we can only define one constructor. If you want different inputs then what you can do is assign default values.
 
+```python
+class Person: 
+    def init(self, name="Unknown", age=0): 
+        self.name = name 
+        self.age = age
+```
+
 #### Usage of `self`
 
-* The ```self``` keyword is a reference to the current instance of the class. It allows us to access the object’s attributes and methods within the class.
-* ```self``` is required as the first parameter in any method that belongs to a class.
+* The `self` keyword is a reference to the current instance of the class. It allows us to access the object’s attributes and methods within the class.
+* `self` is required as the first parameter in any method that belongs to a class.
 
 Example:
 ```python
@@ -44,7 +61,14 @@ class Person:
         self.name = name
         self.age = age
 ```
-When creating a ```Person``` object, ```self.name``` and ```self.age``` refer to attributes that belong to the specific instance of ```Person```.
+When creating a ```Person``` object, ```self.name``` and ```self.age``` refer to attributes that belong to the specific instance of ```Person```. 
+
+Example:
+
+```python
+p = Person("John", 30) 
+print(p.name) # Output: John
+```
 
 ### Attributes and Methods
 
@@ -53,17 +77,22 @@ When creating a ```Person``` object, ```self.name``` and ```self.age``` refer to
 
 #### Example: Class with Data Member and Method
 ```python
-class Car:
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
+class Rectangle: 
+    def init(self, width, height): 
+        self.width = width 
+        self.height = height
 
-    def description(self):
-        return f"{self.make} {self.model}"
+    def area(self):
+        return self.width * self.height
+
 ```
 
-1. **Attributes:** ```make``` and ```model``` store information about the car’s brand and model.
-2. **Method:** ```description()``` is a method that provides a description of the car.
+Usage:
+
+```python
+rect = Rectangle(5, 10) 
+print(rect.area()) # Output: 50
+```
 
 ### Objects and Data Members
 
@@ -117,9 +146,58 @@ Summary:
     * e.g. angle from coordinates
 * Limit functionality of member functions
 
+Example:
+
+```python
+class Point: 
+    def init(self, x, y): 
+        self.x = x 
+        self.y = y
+
+    def distance_to_origin(self):
+        return (self.x**2 + self.y**2)**0.5
+```
+
 ### Algorithm Classes
 
-The other type is algorithm classes
+Algorithm classes contain methods that perform operations. These typically work on data passed in as arguments rather than being stored as attributes.
+
+Example:
+
+```python
+class MathUtils: 
+    @staticmethod def factorial(n): 
+        if n == 0: 
+            return 1 
+        return n * MathUtils.factorial(n - 1)
+```
+
+## Practical Considerations
+
+### Public and Private Members
+
+- **Public members:** Accessible from outside the class.
+- **Private members:** Prefixed with `__` and cannot be accessed directly from outside the class.
+
+Example:
+
+```python
+class MyClass: 
+    def init(self): 
+        self.public_var = "I am public"
+        self.__private_var = "I am private"
+```
+
+### When Not to Use Classes
+
+- If functionality doesn’t logically belong to an object or group, use standalone functions instead of forcing the use of a class.
+
+Example:
+
+```python
+def is_even(n): 
+    return n % 2 == 0
+```
 
 ## Inheritance in OOP
 
@@ -132,7 +210,22 @@ Inheritance allows a derived class or subclass to inherit the attributes and met
 * **Superclass (Parent):** The class being inherited from.
 * **Subclass (Child):** The class that inherits from the superclass.
 
-#### The `super()` Function
+#### Example
+
+```python
+class Animal: 
+    def init(self, species): 
+        self.species = species
+    
+    def sound(self):
+        pass  # To be implemented by subclasses
+
+class Dog(Animal): 
+    def sound(self): 
+        return "Woof"
+```
+
+### The `super()` Function
 
 The ```super()``` function allows us to call methods from the superclass in the subclass, commonly used to call the superclass's constructor.
 
@@ -152,56 +245,10 @@ triangle = Triangle()
 print("Triangle has", triangle.sides, "sides")
 ```
 
-## Practical Considerations
-
-### Public and Private Members
-
-### When Not to Use Classes
+---
 
 ## Summary
 
-## Single data member
-
-Python in an OOP language and so everything in Python is an object, with its properties and methods. A Class is like an object constructor, or "blueprint" for creating objects.
-
-Lets study the following example:
-
-```python
-class MyClass:
-    def __init__(self,name):
-        self.name = name
-```
-
-Notes:
-
-* In the PEP 8 coding style, the class name should be in Pascal case meaning that the first letter of each compound word is capitalized
-* To create a class, the keyword ```class``` is used followed immediately by the name of the class
-* A function that's part of a class is called a method
-* The method ```__init__()``` is special and is run automatically when a new instance of a class is created. It is used to assign values to object properties, or other operations that are necessary when the object is created. It is called the contructor. In Python we can only define one constructor per class
-* The ```self``` variable is a reference to the current instance of the class and is used to access variables that belong to the class
-
-Having defined a class we can create instances of the class:
-
-```python
-m1 = MyClass("A new object")
-m2 = MyClass("A new object")
-```
-
-When calling the class name (```MyClass``` in the above example) as a function it calls the constructor. 
-
-Now we have 2 objects we can work with the data member (```name``` in this case):
-
-```python
-m1.name = "Updated name"
-print("m1.name = " + m1.name)
-print("m2.name = " + m2.name)
-```
-
-So, we've changed the name of m1. The output of the prints is as follows:
-
-```python
-m1.name = Updated name
-m2.name = A new object
-```
-
-We can use the name because, by default, data members and member functions are public
+- OOP provides a way to structure code around objects.
+- **Key components:** Classes, objects, methods, inheritance, and data encapsulation.
+- Use classes when they make logical sense for grouping related data and behavior.
