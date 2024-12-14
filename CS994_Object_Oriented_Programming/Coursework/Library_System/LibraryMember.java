@@ -47,6 +47,18 @@ public class LibraryMember
         }
     }
     
+    public void printDetails(){
+        System.out.println("Library Member ID: " + id);
+        if (borrowedBooks.isEmpty()) {
+            System.out.println("Borrowed Books: None");
+        } else {
+            System.out.println("Borrowed Books: ");
+            for (PhysicalBook book : borrowedBooks){
+            book.printDetails();
+            }
+        }
+    }
+    
     public int numberOfBorrowedBooks(){
         return borrowedBooks.size();
     }
