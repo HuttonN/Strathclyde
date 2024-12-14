@@ -40,7 +40,14 @@ public class Library
         }
         
         if (resource instanceof PhysicalBook){
-            
+            PhysicalBook book = (PhysicalBook) resource;
+            Author author = book.getAuthor();
+            if (author == null) {
+                System.out.println("Error: The resource does not have an associated author");
+                return;
+            }
+            author.setFirstName(newFirstName);
+            System.out.println("Author's first name updated successfully.");
         }
     }
     
