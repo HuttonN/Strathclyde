@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ElectronicResource
+comment0.text=\n\ Write\ a\ description\ of\ class\ ElectronicResource\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=title\ downloadable
+comment1.target=ElectronicResource(java.lang.String,\ boolean)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ ElectronicResource\n
+comment2.params=
+comment2.target=boolean\ isDownloadable()
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment3.params=downloadable
+comment3.target=void\ setDownloadable(boolean)
+comment4.params=
+comment4.target=void\ printDetails()
+numComments=5

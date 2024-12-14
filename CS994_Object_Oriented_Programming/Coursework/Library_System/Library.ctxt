@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Library
+comment0.text=\n\ Write\ a\ description\ of\ class\ Library\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Library()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Library\n
+comment2.params=resource
+comment2.target=void\ addResource(LibraryResource)
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment3.params=resource
+comment3.target=boolean\ containsResource(LibraryResource)
+comment4.params=
+comment4.target=void\ printPhysicalBooks()
+comment5.params=
+comment5.target=void\ printElectronicResources()
+numComments=6
