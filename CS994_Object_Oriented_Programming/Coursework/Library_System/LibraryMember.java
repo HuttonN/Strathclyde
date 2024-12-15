@@ -62,4 +62,13 @@ public class LibraryMember
     public int numberOfBorrowedBooks(){
         return borrowedBooks.size();
     }
+    
+    public void returnBook(PhysicalBook book){
+        if (borrowedBooks.contains(book)){
+            borrowedBooks.remove(book);
+            System.out.println("Book '" + book.getTitle() + "' removed from Library Member ID: " + id + "'s borrowed books.");
+        } else {
+            System.out.println("Error: Book '" + book.getTitle() + "' is not in Library Member ID: " + id + "'s borrowed books.");
+        }
+    }
 }

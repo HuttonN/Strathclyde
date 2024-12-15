@@ -1,8 +1,15 @@
-Project documentation
+Class documentation
 <---- javadoc command: ---->
 javadoc
--sourcepath
-/Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
 -source
 21
 -classpath
@@ -13,35 +20,19 @@ javadoc
 UTF-8
 -charset
 UTF-8
--doctitle
-Library_System
--windowtitle
-Library_System
--author
--version
--nodeprecated
--package
--Xdoclint:none
--link
-https://docs.oracle.com/en/java/javase/21/docs/api/
-/Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/LibraryResource.java
-/Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/Author.java
+/Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/Library.java
 <---- end of javadoc command ---->
-Loading source file /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/LibraryResource.java...
-Loading source file /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/Author.java...
+Loading source file /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/Library.java...
 Constructing Javadoc information...
-Building index for all the packages and classes...
 Standard Doclet version 21.0.4+7-LTS
 Building tree for all the packages and classes...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/Author.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/LibraryResource.html...
+Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/Library.html...
+/Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/Library.java:24: warning: @param argument "y" is not a parameter name.
+     * @param  y  a sample parameter for a method
+       ^
+/Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/Library.java:28: warning: @return tag cannot be used in method with void return type.
+    public void addResource(LibraryResource resource){
+                ^
 Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/package-summary.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/package-tree.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/overview-tree.html...
-Building index for all classes...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/allclasses-index.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/allpackages-index.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/index-all.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/search.html...
 Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/index.html...
-Generating /Users/neilsmac/Documents/Strathclyde/CS994_Object_Oriented_Programming/Coursework/Library_System/doc/help-doc.html...
+2 warnings
