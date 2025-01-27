@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.target=ElectronicResource
-comment0.text=\n\ Write\ a\ description\ of\ class\ ElectronicResource\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Represents\ an\ electronic\ resource\ in\ the\ library\ system.<p>\n\ \n\ Extends\ the\ {@link\ LibraryResource}\ class\ and\ includes\ information\n\ specific\ to\ electronic\ resources,\ such\ as\ whether\ the\ resource\ is\ downloadable.<p>\n\ \n\ Examples\ of\ electronic\ resources\ include\ e-books,\ online\ articles,\ and\ journals.<p>\n\ \n\ <b>Version\ 1.1\ Notes\:</b><br>\n\ -\ Added\ the\ {@code\ getDetails}\ method\ to\ generate\ the\ resource\ details\ as\ a\ String.<br>\n\ -\ removed\ {@code\ printDetails}\ method\ as\ defined\ by\ superclass<br>\n\ \n\ @author\ Neil\ Hutton\n\ @version\ 1.1\n
 comment1.params=title\ downloadable
 comment1.target=ElectronicResource(java.lang.String,\ boolean)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ ElectronicResource\n
+comment1.text=\n\ Constructs\ a\ new\ ElectronicResource\ object\ with\ the\ specified\ title\ and\ downloadable\ status.\n\ \n\ @param\ title\ the\ title\ of\ the\ electronic\ resource\n\ @param\ downloadable\ \ true\ if\ the\ resource\ is\ downloadable,\ false\ otherwise\n
 comment2.params=
 comment2.target=boolean\ isDownloadable()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment2.text=\n\ Checks\ whether\ the\ electronic\ resource\ is\ downloadable.\n\ \n\ @return\ {@code\ true}\ if\ the\ resource\ is\ downloadable,\ {@code\ false}\ otherwise\n
 comment3.params=downloadable
 comment3.target=void\ setDownloadable(boolean)
+comment3.text=\n\ Sets\ whether\ the\ electronic\ resource\ is\ downloadable.\n\ \n\ @param\ downloadable\ {@code\ true}\ to\ mark\ the\ resource\ as\ downloadable,\ {@code\ false}\ otherwise\n
 comment4.params=
-comment4.target=void\ printDetails()
+comment4.target=java.lang.String\ getDetails()
+comment4.text=\n\ Generates\ a\ string\ containing\ the\ details\ of\ the\ electronic\ resource.\n\ \n\ @return\ a\ string\ representation\ of\ the\ electronic\ resource\n
 numComments=5

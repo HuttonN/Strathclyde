@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ElectronicResourceTest
+comment0.text=\n\ Unit\ tests\ for\ the\ {@link\ ElectronicResource}\ class.<p>\n\ \n\ Tests\ the\ functionality\ of\ the\ constructor,\ getter,\ setter,\ and\ {@code\ getDetails}\ methods.\ Implicitly\ \n\ tests\ the\ {@code\ printDetails}\ method\ as\ it\ just\ applies\ {@code\ System.out.println}\ to\ the\ {@code\ getDetails}\ method.<p>\n\ \n\ @author\ \ Neil\ Hutton\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ testConstructorAndGetters()
+comment1.text=\n\ Tests\ the\ constructor\ and\ getter\ methods\ of\ the\ {@code\ ElectronicResource}\ class.\n
+comment2.params=
+comment2.target=void\ testIsDownloadable()
+comment2.text=\n\ Tests\ the\ {@code\ isDownloadable}\ method\ of\ the\ {@code\ ElectronicResource}\ class.\n
+comment3.params=
+comment3.target=void\ testSetDownloadable()
+comment3.text=\n\ Tests\ the\ {@code\ setDownloadable}\ method\ of\ the\ {@code\ ElectronicResource}\ class.\n
+comment4.params=
+comment4.target=void\ testGetDetails()
+comment4.text=\n\ Tests\ the\ {@code\ getDetails}\ method\ of\ the\ {@code\ ElectronicResource}\ class.\n
+numComments=5

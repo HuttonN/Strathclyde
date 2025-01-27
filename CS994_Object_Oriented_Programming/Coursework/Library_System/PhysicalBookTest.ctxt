@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=PhysicalBookTest
+comment0.text=\n\ Unit\ tests\ for\ the\ {@link\ PhysicalBook}\ class.<p>\n\ \n\ Tests\ the\ functionality\ of\ the\ constructor,\ getter,\ setter,\ {@code\ isAvailable},\ {@code\ addDamage},\ and\ \n\ {@code\ getDetails}\ methods.\ Implicitly\ tests\ the\ {@code\ printDetails}\ method\ as\ it\ just\ applies\ {@code\ System.out.println}\ \n\ to\ the\ {@code\ getDetails}\ method.<p>\n\ \n\ @author\ Neil\ Hutton\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ testConstructorAndGetters()
+comment1.text=\n\ Tests\ the\ constructor\ and\ getter\ methods\ of\ the\ PhysicalBook\ class.\n
+comment2.params=
+comment2.target=void\ testSetIsbn()
+comment2.text=\n\ Tests\ the\ {@code\ setIsbn}\ method\ of\ the\ {@code\ PhysicalBook}\ class.\n
+comment3.params=
+comment3.target=void\ testSetAuthor()
+comment3.text=\n\ Tests\ the\ {@code\ setAuthor}\ method\ of\ the\ {@code\ PhysicalBook}\ class.\n
+comment4.params=
+comment4.target=void\ testAddAndGetDamages()
+comment4.text=\n\ Tests\ the\ {@code\ addDamage}\ and\ {@code\ getDamages}\ methods\ of\ the\ {@code\ PhysicalBook}\ class.\n
+comment5.params=
+comment5.target=void\ testAvailability()
+comment5.text=\n\ Tests\ the\ {@code\ isAvailable}\ and\ {@code\ setLibraryMember}\ methods\ of\ the\ {@code\ PhysicalBook}\ class.\n
+comment6.params=
+comment6.target=void\ testSetDamages()
+comment6.text=\n\ Tests\ the\ {@code\ setDamages}\ method\ of\ the\ {@code\ PhysicalBook}\ class.\n
+comment7.params=
+comment7.target=void\ testGetDetails()
+comment7.text=\n\ Tests\ the\ {@code\ getDetails}\ method\ of\ the\ {@code\ PhysicalBook}\ class.\n
+numComments=8

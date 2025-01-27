@@ -1,15 +1,19 @@
 #BlueJ class context
 comment0.target=LibraryResource
-comment0.text=\n\ ------------------------\n\ LibraryResource\ class\n\ ------------------------\n\ \n\ Has\ the\ following\ accessor\ methods\:\n\ \ -\ getTitle\:\ returns\ the\ title\ of\ the\ LibraryResource\n\ \n\ Has\ the\ following\ mutator\ methods\:\n\ \ -\ setTitle\:\ method\ to\ set\ the\ title\ of\ the\ LibraryResource\n\n\ @author\ (Neil\ Hutton)\n\ @version\ (6\ December\ 2024)\n
+comment0.text=\n\ Represents\ a\ generic\ resource\ in\ the\ library.\ This\ is\ an\ abstract\ base\ class\ for\ specific\ types\ of\ \n\ resources\ such\ as\ physical\ books\ and\ electronic\ resources.\ It\ defines\ common\ properties\ and\ behaviors\n\ shared\ by\ all\ library\ resources.<p>\n\ \n\ Subclasses\:\ {@link\ PhysicalBook},\ {@link\ ElectronicResource}\ <p>\n\ \n\ <b>Version\ 1.1\ Notes\:</b><br>\n\ -\ Added\ the\ {@code\ getDetails}\ method.\ To\ be\ implemented\ by\ subclasses\ to\ generate\ the\ resource\ details\ as\ a\ String.<br>\n\ -\ Modified\ the\ {@code\ printDetails}\ method\ to\ use\ {@code\ getDetails}\ for\ better\ testability.<br>\n\ \n\ @author\ Neil\ Hutton\n\ @version\ 1.1\n
 comment1.params=title
 comment1.target=LibraryResource(java.lang.String)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LibraryResource.\n
+comment1.text=\n\ Constructs\ a\ new\ LibraryResource\ with\ the\ specified\ title.\n\ \n\ @param\ title\ the\ title\ of\ the\ resource\n
 comment2.params=
 comment2.target=java.lang.String\ getTitle()
-comment2.text=\n\ ------------------------\n\ Accessor\ methods\n\ ------------------------\n
-comment3.params=
-comment3.target=void\ setTitle()
-comment3.text=\n\ ------------------------\n\ Mutator\ methods\n\ ------------------------\n
+comment2.text=\n\ Gets\ the\ title\ of\ the\ library\ resource.\n\ \n\ @return\ the\ title\ of\ the\ resource\n
+comment3.params=title
+comment3.target=void\ setTitle(java.lang.String)
+comment3.text=\n\ Sets\ the\ title\ of\ the\ library\ resource.\n\ \n\ @param\ title\ the\ new\ title\ of\ the\ resource\n
 comment4.params=
-comment4.target=void\ printDetails()
-numComments=5
+comment4.target=java.lang.String\ getDetails()
+comment4.text=\n\ Generates\ a\ string\ containing\ the\ details\ of\ the\ library\ resource.\ Subclasses\ must\ \n\ implement\ this\ method\ to\ return\ specific\ details.\n\ \n\ @return\ a\ string\ representation\ of\ the\ resource's\ details\n
+comment5.params=
+comment5.target=void\ printDetails()
+comment5.text=\n\ Prints\ the\ details\ of\ the\ library\ resource\ to\ the\ console.\ Calls\ the\ abstract\ \n\ {@code\ getDetails}\ method\ for\ the\ content\n
+numComments=6

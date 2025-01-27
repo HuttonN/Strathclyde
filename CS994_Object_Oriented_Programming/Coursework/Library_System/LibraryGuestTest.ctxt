@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=LibraryGuestTest
+comment0.text=\n\ Unit\ tests\ for\ the\ {@link\ LibraryGuest}\ class.<p>\n\ \n\ Tests\ constructor\ validation\ and\ the\ {@code\ getAccessDuration}\ method.<p>\n\ \n\ @author\ Neil\ Hutton\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ testConstructorWithValidDuration()
+comment1.text=\n\ Tests\ that\ the\ constructor\ sets\ the\ access\ duration\ correctly\ when\ a\ valid\ duration\ (1-3\ days)\ is\ provided.\n
+comment2.params=
+comment2.target=void\ testConstructorWithInvalidDurationAboveRange()
+comment2.text=\n\ Tests\ that\ the\ constructor\ throws\ an\ exception\ when\ the\ access\ duration\ exceeds\ 3\ days.\n
+comment3.params=
+comment3.target=void\ testConstructorWithInvalidDurationZero()
+comment3.text=\n\ Tests\ that\ the\ constructor\ throws\ an\ exception\ when\ the\ access\ duration\ is\ positive\ but\ less\ than\ 1\ day.\n
+comment4.params=
+comment4.target=void\ testConstructorWithInvalidDurationNegative()
+comment4.text=\n\ Tests\ that\ the\ constructor\ throws\ an\ exception\ when\ the\ access\ duration\ is\ negative.\n
+comment5.params=
+comment5.target=void\ testConstructorWithMinimumValidDuration()
+comment5.text=\n\ Tests\ that\ the\ constructor\ works\ correctly\ with\ the\ minimum\ valid\ access\ duration\ (1\ day).\n
+comment6.params=
+comment6.target=void\ testConstructorWithMaximumValidDuration()
+comment6.text=\n\ Tests\ that\ the\ constructor\ works\ correctly\ with\ the\ maximum\ valid\ access\ duration\ (3\ days).\n
+numComments=7

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=AuthorTest
+comment0.text=\n\ Unit\ tests\ for\ the\ {@link\ Author}\ class.\n\ \n\ Tests\ the\ functionality\ of\ the\ constructor,\ getter,\ setter,\ and\ getDetails\ methods.\ Implicitly\n\ tests\ the\ printDetails\ method\ as\ it\ just\ applies\ System.out.println\ to\ the\ getDetails\ method.\n\n\ @author\ \ Neil\ Hutton\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ setUp()
+comment2.params=
+comment2.target=void\ testConstructorAndGetters()
+comment2.text=\n\ Tests\ the\ constructor\ and\ getter\ methods\ of\ the\ Author\ class.\n
+comment3.params=
+comment3.target=void\ testSetFirstName()
+comment3.text=\n\ Tests\ the\ setFirstName\ method\ of\ the\ Author\ class\n
+comment4.params=
+comment4.target=void\ testSetSurname()
+comment4.text=\n\ Tests\ the\ setSurname\ method\ of\ the\ Author\ class\n
+comment5.params=
+comment5.target=void\ testSetAddress()
+comment5.text=\n\ Tests\ the\ setAddress\ method\ of\ the\ Author\ class\n
+comment6.params=
+comment6.target=void\ testGetDetails()
+comment6.text=\n\ Tests\ the\ getDetails\ method\ of\ the\ Author\ class\n
+numComments=7

@@ -1,12 +1,10 @@
 #BlueJ class context
 comment0.target=LibraryGuest
-comment0.text=\n\ Write\ a\ description\ of\ class\ LibraryGuest\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Represents\ a\ library\ guest\ who\ has\ temporary\ access\ to\ library\ resources.\ Guests\ can\ only\ access\ resources\ while\ \n\ physically\ present\ in\ the\ library\ and\ have\ a\ limited\ access\ duration\ of\ up\ to\ 3\ days.<p>\n\ \n\ This\ class\ is\ not\ tied\ to\ borrowing\ physical\ books\ or\ accessing\ electronic\ resources\ outside\ the\ library\ premises.<p>\n\ \n\ <b>Version\ 1.1\ Notes\:</b><br>\n\ -\ Modified\ the\ constructor\ to\ throw\ an\ error\ if\ an\ integer\ less\ than\ 1\ is\ input\ for\ \n\ \ \ the\ accessDuration.\ Stops\ zero\ or\ a\ negative\ number\ being\ accepted.<br>\n\ \ \ \n\ @author\ Neil\ Hutton\n\ @version\ 1.1\n
 comment1.params=accessDuration
 comment1.target=LibraryGuest(int)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LibraryGuest\n
+comment1.text=\n\ Constructs\ a\ new\ LibraryGuest\ object\ with\ the\ specified\ access\ duration.\n\ \n\ @param\ accessDuration\ the\ number\ of\ days\ the\ guest\ is\ allowed\ access\ (maximum\ 3\ days,\ minimum\ 3\ days)\n\ @throws\ IllegalArgumentException\ if\ the\ access\ duration\ is\ less\ than\ 1\ day\ or\ greater\ than\ 3\ days\n
 comment2.params=
 comment2.target=int\ getAccessDuration()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
-comment3.params=
-comment3.target=void\ printDetails()
-numComments=4
+comment2.text=\n\ Gets\ the\ access\ duration\ of\ the\ library\ guest.\n\ \n\ @return\ the\ number\ of\ days\ the\ guest\ has\ access\ to\ the\ library\n
+numComments=3
