@@ -85,6 +85,13 @@ Cardinality specifies, for one member of the first entity set, the possible numb
 
 A **crowsfoot symbol** represents the **"many"** side of a relationship.
 
+#### Interpreting ER Diagrams
+
+We can interpret the above ER diagram as follows:
+
+- One *head* manages only one *school* (1:1 from point of view of head) and each *school* has only one *head* (1:1 from point of view of school)
+– One *school* employs many *teachers*, (1:M from point of view of school) but one *teacher* is employed by only one *school* (1:1 from point of view of teacher)
+– One *teacher* teaches many *children* (1:M from point of view of teacher) and each *child* is taught by many *teachers*. (1:M from point of view of child) – hence this relationship is M:M overall (both ways/points of views).
 
 
 ### Key Objectives
