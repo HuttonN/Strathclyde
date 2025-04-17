@@ -96,7 +96,7 @@ Note: since, by definition, a relation cannot have duplicate rows, it is always 
 
 Despite the above, many database systems allow relations to contain duplicates and so this theoretical property doesn't necessarily apply in practice. We are often best served by introducing an *artificial key* attribute if a natural primary key cannot be found. This could be simply a *record number*. 
 
-### **Foreign Keys**
+### Foreign Keys
 A **foreign key** is an attribute (or set of attributes) in one relation that refers to the primary key of another relation.
 
 #### **Example: Staff and Department Relations**
@@ -123,6 +123,64 @@ $relation\_name(\underline{attribute1}, attribute2, \ldots, attributeN)$
 * the name of the relation is followed by a list of the names of the attributes it contains
 * the primary key attribute(s) are underlined
 * Foreign key attributes should be shown using some distinguishing feature such as a dashed underline
+
+## Views
+
+A **view** is a virtual or derived relation based on one or more base tables. It is defined by a query and does not physically store data (unless materialized). Instead, it acts like a *window* into the underlying data, showing only what is specified in the view definition.
+
+### Purpose of Views
+
+- **Security**: Restrict access to sensitive data by exposing only certain attributes or rows.
+- **Simplification**: Encapsulate complex joins, aggregations, or filtering logic for easier querying.
+- **Data Independence**: Provide a stable interface for applications, even if the base tables change.
+- **Customization**: Present data differently for different user roles.
+
+### Example
+
+Suppose we want to allow staff to view only basic information about their own department.
+
+```sql
+CREATE VIEW StaffView AS
+SELECT Sno, Name, DeptNo
+FROM STAFF
+WHERE DeptNo IS NOT NULL;
+```
+
+This view shows only selected columns and hides salary or personal data.
+
+### View Representation (Schema Notation)
+
+Like base relations, views can be represented using relational schema notation:
+
+```sql
+StaffView(Sno, Name, DeptNo)
+```
+
+Note: Views are not part of the base schema but derive from it.
+
+### View Updatability
+
+Not all views can be updated. A view is updatable if it satisfies the following:
+* Based on a single base relation,
+* Contains no aggregation, grouping, or set operations (SUM, GROUP BY, UNION, etc.),
+* Does not include DISTINCT, LIMIT, or joins,
+* Contains the primary key of the base relation,
+* Does not use calculated fields (e.g. salary * 1.1 AS bonus).
+
+### Updating Views
+
+If a view is updatable, SQL allows data modification through it:
+
+```sql
+UPDATE StaffView
+SET DeptNo = 42
+WHERE Sno = 'SG86';
+```
+
+If not, updates will fail unless special rules (like INSTEAD OF triggers) are defined.
+
+### Materialized Views
+Some DBMSs support materialized views, which store the result of the view query for performance reasons. These need to be refreshed to stay current.
 
 ## Integrity constraints
 
